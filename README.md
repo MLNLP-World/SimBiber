@@ -14,7 +14,7 @@ We build the first version and release it.
 ## Installation
 
 ```python
-git clone https://github.com/yizhen20133868/Simbiber.git
+git clone https://github.com/MLNLP-World/Simbiber.git
 pip install bibtexparser
 ```
 
@@ -112,5 +112,4 @@ Please email or lbqin@ir.hit.edu.cn or charleschen2333@gmail.com create Github i
 Thanks to the contributors:
 
 [Libo Qin](http://ir.hit.edu.cn/~lbqin/);
-
 [Qiguang Chen](https://github.com/LightChen233);

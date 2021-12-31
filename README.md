@@ -111,5 +111,5 @@ Please email or lbqin@ir.hit.edu.cn or charleschen2333@gmail.com create Github i
 
 Thanks to the contributors:
 
-[Libo Qin](http://ir.hit.edu.cn/~lbqin/);
-[Qiguang Chen](https://github.com/LightChen233);
+[Libo Qin](http://ir.hit.edu.cn/~lbqin/); [Qiguang Chen](https://github.com/LightChen233); [Qian Liu](https://siviltaram.github.io/)
+

@@ -8,7 +8,7 @@ We also highly recommend another wonderful tool for you  [Rebiber](https://githu
 
 ## Changelog
 
-- **2021.12.30** 
+- **2021.12.31**
 We build the first version and release it.
 
 ## Installation
@@ -105,7 +105,6 @@ Take ICLR as an example:
 
 ## Contact
 
----
 Please email or lbqin@ir.hit.edu.cn or charleschen2333@gmail.com create Github issues here if you have any questions or suggestions. 
 
 ## Contributor

@@ -12,9 +12,9 @@ if __name__ == '__main__':
             return False
 
     parser = ArgumentParser()
-    parser.add_argument('--input_path', type=str, default="./data/custom.bib")
-    parser.add_argument('--output_path', type=str, default="./out/custom.bib")
-    parser.add_argument('--config_path', type=str, default="./parserConfig.json")
+    parser.add_argument('--input_path', type=str, default="./data/bibtex.bib")
+    parser.add_argument('--output_path', type=str, default="./out/bibtex.bib")
+    parser.add_argument('--config_path', type=str, default="./config")
     parser.add_argument('--if_append_output', type=str2bool, default='False')
     parser.add_argument('--cache_num', type=int, default=100)
     args = parser.parse_args()

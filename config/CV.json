@@ -1,0 +1,19 @@
+{
+  "Neural Information Processing Systems": "NeuIPS",
+  "International Conference on Computer Vision": "ICCV",
+  "Conference on Computer Vision and Pattern Recognition": "CVPR",
+  "International Conference on Computer Vision and Pattern Recogintion": "CVPR",
+  "European Conference on Computer Vision": "ECCV",
+  "IEEE International Conference on Image Processing": "ICIP",
+  "International Conference on Pattern Recognition": "ICPR",
+  "International Conference on 3D Vision": "3DV",
+  "Asian Conference on Computer Vision": "ACCV",
+  "IEEE Winter Conference on Applications of Computer Vision": "WACV",
+  "IEEE visualization conference": "IEEE VIS",
+  "International conference on multimedia and expo": "ICME",
+  "British machine vision conference": "BMVC",
+  "ACM International Conference on Multimedia": "ACM MM",
+  "ACM SIGGRAPH Annual Conference": "SIGGRAPH",
+  "International Conference on Medical Image Computing and Computer Assisted Intervention": "MICCAI",
+  "International Conference on Document Analysis and Recognition": "ICDAR"
+}

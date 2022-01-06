@@ -3,6 +3,7 @@ from bibtexparser.bparser import BibTexParser
 from bibtexparser.bwriter import BibTexWriter
 import json
 import re
+import os
 class Bib:
     # Assume that bib_string has valid structure
     def __init__(self, args, bib_string):
@@ -20,14 +21,22 @@ class Bib:
         return bibtexparser.dumps(self.bib_database)
 
     def simplify_bib(self):
-        with open(self.args.config_path, "r", encoding='utf-8') as f:
-            pattern_list = json.loads(f.read())
+        pattern_list= {}
+        if(os.path.isdir(self.args.config_path)):
+            for root, ds, fs in os.walk(self.args.config_path):
+                for f in fs:
+                    with open(os.path.join(root, f), "r", encoding='utf-8') as f:
+                        pattern_list.update(json.loads(f.read()))
+        else:
+            with open(self.args.config_path, "r", encoding='utf-8') as f:
+                pattern_list = json.loads(f.read())
         for index, item in enumerate(self.bib_database.entries):
             if 'archiveprefix' in item:
                 self.bib_database.entries[index]['archivePrefix'] = self.bib_database.entries[index]['archiveprefix']
                 del self.bib_database.entries[index]['archiveprefix']
-                self.bib_database.entries[index]['primaryClass'] = self.bib_database.entries[index]['primaryclass']
-                del self.bib_database.entries[index]['primaryclass']
+                if 'primaryclass' in item:
+                    self.bib_database.entries[index]['primaryClass'] = self.bib_database.entries[index]['primaryclass']
+                    del self.bib_database.entries[index]['primaryclass']
                 continue
             if 'author' not in item:
                 continue
@@ -36,11 +45,14 @@ class Bib:
                                                 'author': item['author'],
                                                 'title': item['title'], }
             if item['ENTRYTYPE'] == 'book':
-                self.bib_database.entries[index]['address'] = item['address']
-                self.bib_database.entries[index]['publisher'] = item['publisher']
-                self.bib_database.entries[index]['year'] = item['year']
+                if 'address' in item:
+                    self.bib_database.entries[index]['address'] = item['address']
+                if 'publisher' in item:
+                    self.bib_database.entries[index]['publisher'] = item['publisher']
+                if 'year' in item:
+                    self.bib_database.entries[index]['year'] = item['year']
                 continue
-            if ('booktitle' in item):
+            if 'booktitle' in item:
                 booktitle = item['booktitle'].replace('\n', ' ')
                 for key in pattern_list.keys():
                     m = re.search(key, booktitle)

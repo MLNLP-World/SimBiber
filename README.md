@@ -4,12 +4,14 @@ We often need to simplify the official bib that consists of many information int
 
 We introduce __SimBiber__, a simple tool in Python to simplify them automatically. Hope it's helpful for you.
 
-We also highly recommend another wonderful tool for you  [Rebiber](https://github.com/yuchenlin/rebiber), which is a tool for normalizing bibtex with official info.
+We also highly recommend another wonderful tool for you [Rebiber](https://github.com/yuchenlin/rebiber), which is a tool for normalizing bibtex with official info.
 
 ## Changelog
 
+- **2021.01.06**
+  We fix a few minor bugs and add more categories of conferences. (now support <span style="color:red;"><b>84</b></span> conferences)
 - **2021.12.31**
-We build the first version and release it.
+  ~~We build the first version and release it.~~
 
 ## Installation
 
@@ -18,17 +20,17 @@ git clone https://github.com/MLNLP-World/Simbiber.git
 pip install bibtexparser
 ```
 
-## Usage（v0.1.0）
+## Usage（v0.2.0）
 
 ```bash 
-python SimBiberParser.py --input_path data/bibtex.bib --output_path out/bibtex.bib --config_path parserConfig.json --if_append_output False --cache_num 100
+python SimBiberParser.py --input_path data/bibtex.bib --output_path out/bibtex.bib --config_path config --if_append_output False --cache_num 100
 ```
 | argument | usage|
 | ----------- | ----------- |
 | `--input_path` | The path to the input bib file that you want to simplify |
-| `--output_path` | The path to the output bib file that you want to save.  |
-| `--config_path` | The path to the mapper config file  |
-| `--if_append_output` | Whether append simplified data to output bib file.  |
+| `--output_path` | The path to the output bib file that you want to save. |
+| `--config_path` | The path to the mapper config file. The path can be a file directory path, like `config` or a single file path, like `config.json`. <br/> <b>PLEASE ATTENTION:</b> If you want to simplify a huge bib file, you'd better extract external json config file to achieve satisfactory speed. |
+| `--if_append_output` | Whether append simplified data to output bib file. |
 | `--cache_num` | The number of bib items you want to simplify at once.<br/> <b>PLEASE ATTENTION:</b> If you want to simplify a huge bib file, you'd better change it to achieve satisfactory speed. |
 
 
@@ -74,21 +76,123 @@ An example simplified output entry from the official information:
 
 The `parserConfig.json` contains a list of converted json files of the mapper between official full name and simplified name.
 
-| Name | Full Name |
+### AI
+
+| Full Name | Name |
 | --- | ----------- |
-| AAAI | Association for the Advance of Artificial Intelligence |
-| ACL |  Association for Computational Linguistics |
-| CCL |  Chinese Computational Linguistics |
-| COLING |  International Conference on Computational Linguistics |
-| EMNLP |  Empirical Methods in Natural Language Processing |
-| ICASSP | International Conference on Acoustics, Speech and Signal Processing |
-| ICLR | International Conference on Learning Representations |
-| ICML | International Conference on Machine Learning |
-| LREC | Language Resources and Evaluation Conference |
-| NeurIPS | Neural Information Processing Systems |
-| NLPCC | Natural Language Processing and Chinese Computing |
-| SemEval | International Workshop on Semantic Evaluation |
-|SIGDIAL| SIGdial Meeting on Discourse and Dialogue|
+|Association for the Advance of Artificial Intelligence|AAAI|
+|International Joint Conference on Autonomous Agents and Multiagent Systems|AAMAS|
+|ACM International Conference on Multimedia|ACM MM|
+|Artificial Intelligence and Statistics|AISTATS|
+|International Conference on Algorithmic Learning Theory|ALT|
+|European Conference on Artificial Intelligence|ECAI|
+|Genetic and Evolutionary Computation Conference|GECCO|
+|International Conference on Artificial Neural Networks|ICANN|
+|International Conference on Automated Planning and Scheduling|ICAPS|
+|International Conference on Case-Based Reasoning and Development|ICCBR|
+|International Conference on Robotics and Automation|ICRA|
+|International Conference on Tools with Artificial Intelligence|ICTAI|
+|International Joint Conference on Artificial Intelligence|IJCAI|
+|International Joint Conference on Neural Networks|IJCNN|
+|International Conference on Intelligent Robots and Systems|IROS|
+|International Conference on Principles of Knowledge Representation and Reasoning|KR|
+|International conference on Knowledge Science, Engineering and Management|KSEM|
+|ACM SIGGRAPH Annual Conference|SIGGRAPH|
+|International Conference on Uncertainty in Artificial Intelligence|UAI|
+|Parallel Problem Solving from Nature|PPSN|
+|Pacific Rim International Conference on Artificial Intelligence|PRICAI|
+|International Conference on Technologies and Applications of Artificial Intelligence|TAAI|
+
+### CV
+
+| Full Name | Name |
+| ----------- | --- |
+|International Conference on 3D Vision|3DV|
+|Asian Conference on Computer Vision|ACCV|
+|ACM International Conference on Multimedia|ACM MM|
+|British machine vision conference|BMVC|
+|International Conference on Computer Vision and Pattern Recogintion|CVPR|
+|European Conference on Computer Vision|ECCV|
+|International Conference on Computer Vision|ICCV|
+|International Conference on Document Analysis and Recognition|ICDAR|
+|IEEE International Conference on Image Processing|ICIP|
+|International conference on multimedia and expo|ICME|
+|International Conference on Pattern Recognition|ICPR|
+|IEEE visualization conference|IEEE VIS|
+|International Conference on Medical Image Computing and Computer Assisted Intervention|MICCAI|
+|Neural Information Processing Systems|NeuIPS|
+|ACM SIGGRAPH Annual Conference|SIGGRAPH|
+|IEEE Winter Conference on Applications of Computer Vision|WACV|
+
+
+### DM
+| Full Name | Name |
+| ----------- | --- |
+|Automated Knowledge Base Construction|AKBC|
+|Asia Pacific Web Conference|APWeb|
+|International Conference on Information and Knowledge Management|CIKM|
+|Database Systems for Advanced Applications|DASFAA|
+|The European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases|ECML-PKDD|
+|IEEE International Conference on Data Engineering|ICDE|
+|IEEE International Conference on Data Mining|ICDM|
+|International Conference on Database Theory|ICDT|
+|ACM SIGKDD Conference on Knowledge Discovery and Data Mining|KDD|
+|Language Resources and Evaluation Conference|LREC|
+|International Conference on Mobile Data Management|MDM|
+|Pacific-Asia Conference on Knowledge Discovery and Data Mining|PAKDD|
+|ACM Symposium on Principles of Database Systems|PODS|
+|The ACM Conference Series on Recommender Systems|RecSys|
+|SIAM International Conference on Data Mining|SDM|
+|ACM Conference on Management of Data|SIGMOD|
+|International Conference on Very Large Data Base|VLDB|
+|ACM International Conference on Web Search and Data Mining|WSDM|
+|The Web Conference|WWW|
+
+### IR
+| Full Name | Name |
+| ----------- | --- |
+|European Conference on IR Research|ECIR|
+|Extended Semantic Web Conference|ESWC|
+|ACM International Conference on Multimedia Retrieval|ICMR|
+|International Semantic Web Conference|ISWC|
+|International Conference on Research on Development in Information Retrieval|SIGIR|
+
+
+### ML
+| Full Name | Name |
+| ----------- | --- |
+|Asian Conference on Machine Learning|ACML|
+|International Conference on Artificial Intelligence and Statistics|AISTATS|
+|International Conference on Learning Representations|ICLR|
+|International Conference on Machine Learning|ICML|
+|Machine Learning for Health|ML4H|
+|Neural Information Processing Systems|NeurIPS|
+|Conference on Uncertainty in Artificial Intelligence|UAI|
+
+### NLP
+| Full Name | Name |
+| ----------- | --- |
+|Asian Chapter of the Association for Computational Linguistics|AACL|
+|Association for Computational Linguistics|ACL|
+|Chinese Computational Linguistics|CCL|
+|International Conference on Computational Linguistics|COLING|
+|Annual Conference on Computational Learning Theory|COLT|
+|Conference on Computational Natural Language Learning|CoNLL|
+|European Chapter of the Association for Computational Linguistics|EACL|
+|Empirical Methods in Natural Language Processing|EMNLP|
+|International Conference on Acoustics, Speech and Signal Processing|ICASSP|
+|International Conference on Document Analysis and Recognition|ICDAR|
+|International Conference on Neural Information Processing|ICONIP|
+|Conference of the International Speech Communication Association|INTERSPEECH|
+|Language Resources and Evaluation Conference|LREC|
+|North American Chapter of the Association for Computational Linguistics|NAACL|
+|Natural Language Processing and Chinese Computing|NLPCC|
+|SIGdial Meeting on Discourse and Dialogue|SIGDIAL|
+|International Workshop on Semantic Evaluation|SemEval|
+|Workshop on Arabic natural language processing|WANLP|
+|Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis|WASSA|
+|Workshop on Online Abuse and Harms|WOAH|
+
 
 ## Adding a new conference
 
@@ -105,11 +209,15 @@ Take ICLR as an example:
 
 ## Contact
 
-Please email or lbqin@ir.hit.edu.cn or charleschen2333@gmail.com create Github issues here if you have any questions or suggestions. 
+Please email [Libo Qin](mailto:lbqin@ir.hit.edu.cn) or [Qiguang Chen](mailto:charleschen2333@gmail.com) to create Github issues here if you have any questions or suggestions. 
 
-## Contributor
+And we welcome you to join us and update conferences at https://docs.qq.com/sheet/DWFF1aWlVV1hISU12?tab=h2idmj 
+
+## Organizers
+[Libo Qin](http://ir.hit.edu.cn/~lbqin/); [Qiguang Chen](https://github.com/LightChen233); [Qian Liu](https://siviltaram.github.io/); 
+
+## Contributors
 
 Thanks to the contributors:
 
-[Libo Qin](http://ir.hit.edu.cn/~lbqin/); [Qiguang Chen](https://github.com/LightChen233); [Qian Liu](https://siviltaram.github.io/)
-
+[Qi Jia](https://github.com/JiaQiSJTU); [bravery](https://github.com/braveryCHR); [Xiao Xu](https://github.com/LooperXX); [Ruibo Liu](https://github.com/DapangLiu); [Shaolei Zhang](https://github.com/Vily1998); [Shiwen Ni](https://github.com/nishiwen1214);  [Qiming Bao](https://github.com/14H034160212); [Haoyu He](https://github.com/Cli212); [Guanglin Niu](https://github.com/ngl567); [Xuan Zhang](https://github.com/Xzhang1995); [Shining Liang](https://github.com/shiningliang); [Ziyu Jia](https://github.com/ziyujia); [Xin Guo](https://github.com/XinGuoZJU); [Chengbin Hou](https://github.com/houchengbin); [Yuanqi Du](https://yuanqidu.github.io/); [Runze Fan](https://rzfan525.github.io/); [Zayne](https://github.com/ZiYueZH); [Zhiqing Guo](https://github.com/EricGzq); [Jiakai Wang](https://github.com/buaa0110); [Pandeng Li](https://github.com/rovgtjktm66); [Yilun Jin](https://github.com/kl4805); [Yuchen Fang](https://github.com/LMissher); [Yiheng Shu](https://yihengshu.github.io/); [Yichao Du](https://github.com/duyichao); 

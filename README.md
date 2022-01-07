@@ -1,5 +1,7 @@
 # SimBiber: A tool for simplifying bibtex with official info.
 
+<img src="figure/MLNLP.png" alt=" " style="width:60%" />
+
 We often need to simplify the official bib that consists of many information into a shorter version that only maintains necessary information (e.g., author, title, conference/journal name and etc) due to page limitation.
 
 We introduce __SimBiber__, a simple tool in Python to simplify them automatically. Hope it's helpful for you.
@@ -220,4 +222,4 @@ And we welcome you to join us and update conferences at https://docs.qq.com/shee
 
 Thanks to the contributors:
 
-[Qi Jia](https://github.com/JiaQiSJTU); [bravery](https://github.com/braveryCHR); [Xiao Xu](https://github.com/LooperXX); [Ruibo Liu](https://github.com/DapangLiu); [Shaolei Zhang](https://github.com/Vily1998); [Shiwen Ni](https://github.com/nishiwen1214);  [Qiming Bao](https://github.com/14H034160212); [Haoyu He](https://github.com/Cli212); [Guanglin Niu](https://github.com/ngl567); [Xuan Zhang](https://github.com/Xzhang1995); [Shining Liang](https://github.com/shiningliang); [Ziyu Jia](https://github.com/ziyujia); [Xin Guo](https://github.com/XinGuoZJU); [Chengbin Hou](https://github.com/houchengbin); [Yuanqi Du](https://yuanqidu.github.io/); [Runze Fan](https://rzfan525.github.io/); [Zayne](https://github.com/ZiYueZH); [Zhiqing Guo](https://github.com/EricGzq); [Jiakai Wang](https://github.com/buaa0110); [Pandeng Li](https://github.com/rovgtjktm66); [Yilun Jin](https://github.com/kl4805); [Yuchen Fang](https://github.com/LMissher); [Yiheng Shu](https://yihengshu.github.io/); [Yichao Du](https://github.com/duyichao); 
+[Qi Jia](https://github.com/JiaQiSJTU); [Guanglin Niu](https://github.com/ngl567); [bravery](https://github.com/braveryCHR); [Xiao Xu](https://github.com/LooperXX); [Ruibo Liu](https://github.com/DapangLiu); [Shaolei Zhang](https://github.com/Vily1998); [Shiwen Ni](https://github.com/nishiwen1214);  [Qiming Bao](https://github.com/14H034160212); [Haoyu He](https://github.com/Cli212); [Xuan Zhang](https://github.com/Xzhang1995); [Shining Liang](https://github.com/shiningliang); [Ziyu Jia](https://github.com/ziyujia); [Xin Guo](https://github.com/XinGuoZJU); [Chengbin Hou](https://github.com/houchengbin); [Yuanqi Du](https://yuanqidu.github.io/); [Runze Fan](https://rzfan525.github.io/); [Zayne](https://github.com/ZiYueZH); [Zhiqing Guo](https://github.com/EricGzq); [Jiakai Wang](https://github.com/buaa0110); [Pandeng Li](https://github.com/rovgtjktm66); [Yilun Jin](https://github.com/kl4805); [Yuchen Fang](https://github.com/LMissher); [Yiheng Shu](https://yihengshu.github.io/); [Yichao Du](https://github.com/duyichao); 

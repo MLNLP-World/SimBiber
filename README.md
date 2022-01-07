@@ -1,6 +1,6 @@
 # SimBiber: A tool for simplifying bibtex with official info.
 
-<img src="figure/MLNLP.png" alt=" " style="width:60%" />
+<img src="figure/MLNLP.png" alt=" " style="width:90%" />
 
 We often need to simplify the official bib that consists of many information into a shorter version that only maintains necessary information (e.g., author, title, conference/journal name and etc) due to page limitation.
 

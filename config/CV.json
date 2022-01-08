@@ -15,5 +15,6 @@
   "ACM International Conference on Multimedia": "ACM MM",
   "ACM SIGGRAPH Annual Conference": "SIGGRAPH",
   "International Conference on Medical Image Computing and Computer Assisted Intervention": "MICCAI",
-  "International Conference on Document Analysis and Recognition": "ICDAR"
+  "International Conference on Document Analysis and Recognition": "ICDAR",
+  "Medical Image Computing and Computer Assisted Intervention Society":"MICCAI"
 }

@@ -17,5 +17,7 @@
   "ACM Symposium on Principles of Database Systems": "PODS",
   "Asia Pacific Web Conference": "APWeb",
   "The ACM Conference Series on Recommender Systems": "RecSys",
-  "International Conference on Mobile Data Management":"MDM"
+  "International Conference on Mobile Data Management":"MDM",
+  "International Conference on Extending DB Technology":"EDBT",
+  "International Conference on Innovative Data Systems Research":"CIDR"
 }

@@ -54,6 +54,7 @@ class Bib:
                 continue
             if 'booktitle' in item:
                 booktitle = item['booktitle'].replace('\n', ' ')
+                booktitle = booktitle.replace('{', '').replace('}', '').replace('  ', ' ').replace('[', '').replace(']', '')
                 for key in pattern_list.keys():
                     m = re.search(key, booktitle)
                     if m is not None:

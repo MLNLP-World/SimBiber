@@ -1,0 +1,7 @@
+{
+  "USENIX Symposium on Operating Systems Design and Implementations": "OSDI",
+  "ACM Symposium on Operating Systems Principles": "SOSP",
+  "International Conference on Software Engineering": "ICSE",
+  "International Symposium on Software Testing and Analysis": "ISSTA",
+  "ACM SIGSOFT Symposium on the Foundation of Software Engineering/ European Software Engineering Conference": "FSE/ESEC"
+}

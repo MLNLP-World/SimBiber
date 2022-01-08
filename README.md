@@ -1,6 +1,29 @@
-# SimBiber: A tool for simplifying bibtex with official info.
-
+<div align="center">
 <img src="figure/MLNLP.png" alt=" " style="width:90%" />
+
+<h1>SimBiber</h1>
+
+**A tool for simplifying bibtex with official info.**
+    
+------
+
+<p align="center">
+      <a href="#Changelog">Changelog</a> •
+      <a href="#Installation">Installation</a> •
+      <a href="#Usage">Usage</a> • 
+      <a href="#Example Input and Output">Example Input and Output</a> •  
+      <a href="#Supported Conferences">Supported Conferences</a> •
+      <a href="#Adding a new conference">Adding a new conference</a> •
+      <a href="#Contact">Contact</a> •
+      <a href="#Organizers">Organizers</a> •
+      <a href="#Contributors">Contributors</a> •
+    </p>
+</div>
+
+
+![version](https://img.shields.io/badge/version-v0.3.0-blue)
+
+
 
 We often need to simplify the official bib that consists of many information into a shorter version that only maintains necessary information (e.g., author, title, conference/journal name and etc) due to page limitation.
 
@@ -9,9 +32,10 @@ We introduce __SimBiber__, a simple tool in Python to simplify them automaticall
 We also highly recommend another wonderful tool for you [Rebiber](https://github.com/yuchenlin/rebiber), which is a tool for normalizing bibtex with official info.
 
 ## Changelog
-
+- **2021.01.08**
+  We fix a bug if booktitle contains `{` or `}` and add more categories of conferences. (now support <span style="color:red;"><b>105</b></span> conferences)
 - **2021.01.06**
-  We fix a few minor bugs and add more categories of conferences. (now support <span style="color:red;"><b>84</b></span> conferences)
+  ~~We fix a few minor bugs and add more categories of conferences. (now support 84 conferences)~~
 - **2021.12.31**
   ~~We build the first version and release it.~~
 
@@ -22,7 +46,7 @@ git clone https://github.com/MLNLP-World/Simbiber.git
 pip install bibtexparser
 ```
 
-## Usage（v0.2.0）
+## Usage（v0.3.0）
 
 ```bash 
 python SimBiberParser.py --input_path data/bibtex.bib --output_path out/bibtex.bib --config_path config --if_append_output False --cache_num 100
@@ -76,7 +100,7 @@ An example simplified output entry from the official information:
 
 ## Supported Conferences 
 
-The `parserConfig.json` contains a list of converted json files of the mapper between official full name and simplified name.
+The `config` dir contains a list of converted json files of the mapper between official full name and simplified name.
 
 ### AI
 
@@ -87,11 +111,14 @@ The `parserConfig.json` contains a list of converted json files of the mapper be
 |ACM International Conference on Multimedia|ACM MM|
 |Artificial Intelligence and Statistics|AISTATS|
 |International Conference on Algorithmic Learning Theory|ALT|
+|IEEE Congress on Evolutionary Computation|CEC|
 |European Conference on Artificial Intelligence|ECAI|
+|IEEE International Conference on Fuzzy Systems|FUZZ IEEE|
 |Genetic and Evolutionary Computation Conference|GECCO|
 |International Conference on Artificial Neural Networks|ICANN|
 |International Conference on Automated Planning and Scheduling|ICAPS|
 |International Conference on Case-Based Reasoning and Development|ICCBR|
+|International Conference on Neural Information Processing|ICONIP|
 |International Conference on Robotics and Automation|ICRA|
 |International Conference on Tools with Artificial Intelligence|ICTAI|
 |International Joint Conference on Artificial Intelligence|IJCAI|
@@ -100,6 +127,7 @@ The `parserConfig.json` contains a list of converted json files of the mapper be
 |International Conference on Principles of Knowledge Representation and Reasoning|KR|
 |International conference on Knowledge Science, Engineering and Management|KSEM|
 |ACM SIGGRAPH Annual Conference|SIGGRAPH|
+|ACM Symposium on Theory of Computing|STOC|
 |International Conference on Uncertainty in Artificial Intelligence|UAI|
 |Parallel Problem Solving from Nature|PPSN|
 |Pacific Rim International Conference on Artificial Intelligence|PRICAI|
@@ -121,7 +149,7 @@ The `parserConfig.json` contains a list of converted json files of the mapper be
 |International conference on multimedia and expo|ICME|
 |International Conference on Pattern Recognition|ICPR|
 |IEEE visualization conference|IEEE VIS|
-|International Conference on Medical Image Computing and Computer Assisted Intervention|MICCAI|
+|International Conference on Medical Image Computing and Computer Assisted Intervention Society|MICCAI|
 |Neural Information Processing Systems|NeuIPS|
 |ACM SIGGRAPH Annual Conference|SIGGRAPH|
 |IEEE Winter Conference on Applications of Computer Vision|WACV|
@@ -149,6 +177,8 @@ The `parserConfig.json` contains a list of converted json files of the mapper be
 |International Conference on Very Large Data Base|VLDB|
 |ACM International Conference on Web Search and Data Mining|WSDM|
 |The Web Conference|WWW|
+|International Conference on Extending DB Technology|EDBT|
+|International Conference on Innovative Data Systems Research|CIDR|
 
 ### IR
 | Full Name | Name |
@@ -158,13 +188,14 @@ The `parserConfig.json` contains a list of converted json files of the mapper be
 |ACM International Conference on Multimedia Retrieval|ICMR|
 |International Semantic Web Conference|ISWC|
 |International Conference on Research on Development in Information Retrieval|SIGIR|
-
+|The ACM SIGIR International Conference on the Theory of Information Retrieval|ICTIR|
 
 ### ML
 | Full Name | Name |
 | ----------- | --- |
 |Asian Conference on Machine Learning|ACML|
 |International Conference on Artificial Intelligence and Statistics|AISTATS|
+|European Conference on Machine Learning|ECML|
 |International Conference on Learning Representations|ICLR|
 |International Conference on Machine Learning|ICML|
 |Machine Learning for Health|ML4H|
@@ -195,6 +226,39 @@ The `parserConfig.json` contains a list of converted json files of the mapper be
 |Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis|WASSA|
 |Workshop on Online Abuse and Harms|WOAH|
 
+### Arch
+| Full Name | Name |
+| ----------- | --- |
+|International Conference on Architectural Support for Programming Languages and Operating Systems|ASPLOS|
+|USENIX Annul Technical Conference|ATC|
+|Design, Automation & Test in Europe|DATE|
+|European Conference on Computer Systems|EuroSys|
+|Conference on File and Storage Technologies|FAST|
+|High Performance Computer Architecture|HPCA|
+|International Symposium on Computer Architecture|ISCA|
+|IEEE/ACM International Symposium on Microarchitecture|MICRO|
+|ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming|PPoPP|
+|International Conference for High Performance Computing, Networking, Storage, and Analysis|SC|
+|ACM Symposium on Cloud Computing|SoCC|
+
+### System
+| Full Name | Name |
+| ----------- | --- |
+|ACM SIGSOFT Symposium on the Foundation of Software Engineering/ European Software Engineering Conference|FSE/ESEC|
+|International Conference on Software Engineering|ICSE|
+|International Symposium on Software Testing and Analysis|ISSTA|
+|USENIX Symposium on Operating Systems Design and Implementations|OSDI|
+|ACM Symposium on Operating Systems Principles|SOSP|
+
+
+### Security
+| Full Name | Name |
+| ----------- | --- |
+|ACM Conference on Computer and Communications Security|CCS|
+|IEEE Symposium on Security and Privacy|SP|
+|Usenix Security Symposium|USENIX Security|
+|Network and Distributed System Security Symposium|NDSS|
+
 
 ## Adding a new conference
 
@@ -222,4 +286,8 @@ And we welcome you to join us and update conferences at https://docs.qq.com/shee
 
 Thanks to the contributors:
 
-[Qi Jia](https://github.com/JiaQiSJTU); [Guanglin Niu](https://github.com/ngl567); [bravery](https://github.com/braveryCHR); [Xiao Xu](https://github.com/LooperXX); [Ruibo Liu](https://github.com/DapangLiu); [Shaolei Zhang](https://github.com/Vily1998); [Shiwen Ni](https://github.com/nishiwen1214);  [Qiming Bao](https://github.com/14H034160212); [Haoyu He](https://github.com/Cli212); [Xuan Zhang](https://github.com/Xzhang1995); [Shining Liang](https://github.com/shiningliang); [Ziyu Jia](https://github.com/ziyujia); [Xin Guo](https://github.com/XinGuoZJU); [Chengbin Hou](https://github.com/houchengbin); [Yuanqi Du](https://yuanqidu.github.io/); [Runze Fan](https://rzfan525.github.io/); [Zayne](https://github.com/ZiYueZH); [Zhiqing Guo](https://github.com/EricGzq); [Jiakai Wang](https://github.com/buaa0110); [Pandeng Li](https://github.com/rovgtjktm66); [Yilun Jin](https://github.com/kl4805); [Yuchen Fang](https://github.com/LMissher); [Yiheng Shu](https://yihengshu.github.io/); [Yichao Du](https://github.com/duyichao); 
+[Qi Jia](https://github.com/JiaQiSJTU); [Guanglin Niu](https://github.com/ngl567); [bravery](https://github.com/braveryCHR); [Xiao Xu](https://github.com/LooperXX); [Ruibo Liu](https://github.com/DapangLiu); [Shaolei Zhang](https://github.com/Vily1998); [Shiwen Ni](https://github.com/nishiwen1214);  [Qiming Bao](https://github.com/14H034160212); [Haoyu He](https://github.com/Cli212); [Xuan Zhang](https://github.com/Xzhang1995); 
+
+[Shining Liang](https://github.com/shiningliang); [Ziyu Jia](https://github.com/ziyujia); [Xin Guo](https://github.com/XinGuoZJU); [Chengbin Hou](https://github.com/houchengbin); [Yuanqi Du](https://yuanqidu.github.io/); [Runze Fan](https://rzfan525.github.io/); [Zayne](https://github.com/ZiYueZH); [Zhiqing Guo](https://github.com/EricGzq); [Jiakai Wang](https://github.com/buaa0110); [Pandeng Li](https://github.com/rovgtjktm66); 
+
+[Yilun Jin](https://github.com/kl4805); [Yuchen Fang](https://github.com/LMissher); [Yiheng Shu](https://yihengshu.github.io/); [Yichao Du](https://github.com/duyichao); [Ryder](https://github.com/ryderling); [Xupeng Miao](https://hsword.github.io); [Jiawei Liu](https://github.com/LauJames);

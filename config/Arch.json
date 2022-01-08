@@ -1,0 +1,13 @@
+{
+  "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming": "PPoPP",
+  "Conference on File and Storage Technologies": "FAST",
+  "International Symposium on Microarchitecture": "MICRO",
+  "International Conference for High Performance Computing, Networking, Storage, and Analysis": "SC",
+  "High Performance Computer Architecture": "HPCA",
+  "International Conference on Architectural Support for Programming Languages and Operating Systems": "ASPLOS",
+  "International Symposium on Computer Architecture": "ISCA",
+  "USENIX Annul Technical Conference": "ATC",
+  "ACM Symposium on Cloud Computing": "SoCC",
+  "Design, Automation & Test in Europe": "DATE",
+  "European Conference on Computer Systems": "EuroSys"
+}

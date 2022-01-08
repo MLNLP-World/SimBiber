@@ -21,5 +21,9 @@
   "International Conference on Intelligent Robots and Systems": "IROS",
   "International Conference on Algorithmic Learning Theory": "ALT",
   "International conference on Knowledge Science, Engineering and Management": "KSEM",
-  "Genetic and Evolutionary Computation Conference": "GECCO"
+  "Genetic and Evolutionary Computation Conference": "GECCO",
+  "IEEE Congress on Evolutionary Computation": "CEC",
+  "ACM Symposium on Theory of Computing": "STOC",
+  "IEEE International Conference on Fuzzy Systems": "FUZZ IEEE",
+  "International Conference on Neural Information Processing": "ICONIP"
 }

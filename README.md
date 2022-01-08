@@ -1,10 +1,7 @@
 <div align="center">
 <img src="figure/MLNLP.png" alt=" " style="width:90%" />
+<h2>SimBiber: A tool for simplifying bibtex with official info.</h2>
 
-<h1>SimBiber</h1>
-
-**A tool for simplifying bibtex with official info.**
-    
 ------
 
 <p align="center">

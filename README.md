@@ -29,7 +29,7 @@ We introduce __SimBiber__, a simple tool in Python to simplify them automaticall
 We also highly recommend another wonderful tool for you [Rebiber](https://github.com/yuchenlin/rebiber), which is a tool for normalizing bibtex with official info.
 
 ## Changelog
-- **2021.01.08**
+- **2022.01.08**
   We fix a bug if booktitle contains `{` or `}` and add more categories of conferences. (now support <span style="color:red;"><b>105</b></span> conferences)
 - **2021.01.06**
   ~~We fix a few minor bugs and add more categories of conferences. (now support 84 conferences)~~

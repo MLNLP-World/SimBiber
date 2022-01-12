@@ -2,5 +2,12 @@
   "ACM Conference on Computer and Communications Security": "CCS",
   "IEEE Symposium on Security and Privacy": "SP",
   "Usenix Security Symposium": "USENIX Security",
-  "Network and Distributed System Security Symposium": "NDSS"
+  "Network and Distributed System Security Symposium": "NDSS",
+  "Annual Computer Security Applications Conference": "ACSA",
+  "Dependable Systems and Networks": "DSN",
+  "European Symposium on Research in Computer Security": "ESORICS",
+  "International Symposium on Recent Advances in Intrusion Detection": "RAID",
+  "ACM Asia Conference on Computer and Communications Security": "AsiaCCS",
+  "European Symposium on Security and Privacy": "EuroS&P",
+  "International Conference on Information and Communication Security": "ICICS"
 }

@@ -49,7 +49,7 @@ git clone https://github.com/MLNLP-World/Simbiber.git
 pip install bibtexparser
 ```
 
-## Usage（v0.4.0）
+## Usage(v0.4.0)
 
 ```bash 
 python SimBiberParser.py --input_path data --config_path config --if_append_output False --cache_num 100 --remove_duplicate True

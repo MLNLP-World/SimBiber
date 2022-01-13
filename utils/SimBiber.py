@@ -72,5 +72,6 @@ class SimBiber():
                     self.__judge_use_temp__()
                     self.__simplify__()
         else:
+            self.bib = Bib(self.args)
             self.__judge_use_temp__()
             self.__simplify__()

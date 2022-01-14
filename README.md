@@ -301,5 +301,5 @@ Thanks to the contributors:
 
 [Shining Liang](https://github.com/shiningliang); [Ziyu Jia](https://github.com/ziyujia); [Xin Guo](https://github.com/XinGuoZJU); [Chengbin Hou](https://github.com/houchengbin); [Yuanqi Du](https://yuanqidu.github.io/); [Runze Fan](https://rzfan525.github.io/); [Zayne](https://github.com/ZiYueZH); [Zhiqing Guo](https://github.com/EricGzq); [Jiakai Wang](https://github.com/buaa0110); [Pandeng Li](https://github.com/rovgtjktm66); 
 
-[Yilun Jin](https://github.com/kl4805); [Yuchen Fang](https://github.com/LMissher); [Yiheng Shu](https://yihengshu.github.io/); [Yichao Du](https://github.com/duyichao); [Ryder](https://github.com/ryderling); [Xupeng Miao](https://hsword.github.io); [Jiawei Liu](https://github.com/LauJames); [Guangke Chen](http://guangkechen.site/)
+[Yilun Jin](https://github.com/kl4805); [Yuchen Fang](https://github.com/LMissher); [Yiheng Shu](https://yihengshu.github.io/); [Yichao Du](https://github.com/duyichao); [Ryder](https://github.com/ryderling); [Xupeng Miao](https://hsword.github.io); [Jiawei Liu](https://github.com/LauJames); [Guangke Chen](http://guangkechen.site/); [Guanqi Zhu](https://github.com/ustc-zhu)
 

@@ -18,7 +18,7 @@
 </div>
 
 
-![version](https://img.shields.io/badge/version-v0.4.0-blue)
+![version](https://img.shields.io/badge/version-v0.5.0-blue)
 
 
 
@@ -29,12 +29,16 @@ We introduce __SimBiber__, a simple tool in Python to simplify them automaticall
 We also highly recommend another wonderful tool for you [Rebiber](https://github.com/yuchenlin/rebiber), which is a tool for normalizing bibtex with official info.
 
 ## Changelog
+- **2021.01.21**
+  - Support to **remove duplication** if your bib has some bibitems with same title. (automatically choose Conference citation)
+  - Fix some bugs about some conferences.
+  - Add **more** categories of conferences. (now support <span style="color:red;"><b>113</b></span> conferences)
 - **2021.01.11**
-  - Fix a bug if **output path is the same as input path**.
-  - Support to **remove duplication** if your bib has both of arXiv or Conference citation.
+  - ~~Fix a bug if **output path is the same as input path**.~~
+  - ~~Support to **remove duplication** if your bib has both of arXiv or Conference citation.~~
   - Support to simplify files **by folder**.
   - Support to use **default** output path.
-  - Add **more** categories of conferences. (now support <span style="color:red;"><b>112</b></span> conferences)
+  - ~~Add **more** categories of conferences. (now support 112 conferences)~~
 - **2021.01.08**
   ~~We fix a bug if booktitle contains `{` or `}` and add more categories of conferences. (now support 105 conferences)~~
 - **2021.01.06**
@@ -49,7 +53,7 @@ git clone https://github.com/MLNLP-World/Simbiber.git
 pip install bibtexparser
 ```
 
-## Usage(v0.4.0)
+## Usage(v0.5.0)
 
 ```bash 
 python SimBiberParser.py --input_path data --config_path config --if_append_output False --cache_num 100 --remove_duplicate True
@@ -154,7 +158,6 @@ The `config` dir contains a list of converted json files of the mapper between o
 |International Conference on Pattern Recognition|ICPR|
 |IEEE visualization conference|IEEE VIS|
 |International Conference on Medical Image Computing and Computer Assisted Intervention Society|MICCAI|
-|Neural Information Processing Systems|NeuIPS|
 |ACM SIGGRAPH Annual Conference|SIGGRAPH|
 |IEEE Winter Conference on Applications of Computer Vision|WACV|
 
@@ -177,7 +180,7 @@ The `config` dir contains a list of converted json files of the mapper between o
 |ACM Symposium on Principles of Database Systems|PODS|
 |The ACM Conference Series on Recommender Systems|RecSys|
 |SIAM International Conference on Data Mining|SDM|
-|ACM Conference on Management of Data|SIGMOD|
+|ACM SIGMOD international conference on Management of data|SIGMOD|
 |International Conference on Very Large Data Base|VLDB|
 |ACM International Conference on Web Search and Data Mining|WSDM|
 |The Web Conference|WWW|
@@ -224,6 +227,7 @@ The `config` dir contains a list of converted json files of the mapper between o
 |Language Resources and Evaluation Conference|LREC|
 |North American Chapter of the Association for Computational Linguistics|NAACL|
 |Natural Language Processing and Chinese Computing|NLPCC|
+|Workshop on Representation Learning for NLP|RepL4NLP|
 |SIGdial Meeting on Discourse and Dialogue|SIGDIAL|
 |International Workshop on Semantic Evaluation|SemEval|
 |Workshop on Arabic natural language processing|WANLP|
@@ -303,3 +307,9 @@ Thanks to the contributors:
 
 [Yilun Jin](https://github.com/kl4805); [Yuchen Fang](https://github.com/LMissher); [Yiheng Shu](https://yihengshu.github.io/); [Yichao Du](https://github.com/duyichao); [Ryder](https://github.com/ryderling); [Xupeng Miao](https://hsword.github.io); [Jiawei Liu](https://github.com/LauJames); [Guangke Chen](http://guangkechen.site/); [Guanqi Zhu](https://github.com/ustc-zhu)
 
+## Disclaimer
+
+SimBiber is a fairly new project and it is under active development. 
+We hope that it will be quite useful in a variety of cases, but there is no guarantee that the results it produces will necessarily be strictly compliant with the official specification.
+
+<div style="color: red"><b>So you'd better check the accuracy of simplified bib files again.</b></div>

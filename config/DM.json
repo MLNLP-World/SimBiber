@@ -1,9 +1,10 @@
 {
    "KDD": "KDD",
   "Knowledge Discovery and Data Mining": "KDD",
-  "ACM Conference on Management of Data": "SIGMOD",
+  "SIGMOD international conference on Management of data": "SIGMOD",
   "The Web Conference": "WWW",
   "World Wide Web Conference": "WWW",
+  "international conference on world wide web": "WWW",
   "IEEE International Conference on Data Engineering": "ICDE",
   "International Conference on Very Large Data Base": "VLDB",
   "International Conference on Database Theory": "ICDT",
@@ -16,10 +17,11 @@
   "Language Resources and Evaluation Conference": "LREC",
   "Pacific-Asia Conference on Knowledge Discovery and Data Mining": "PAKDD",
   "Database Systems for Advanced Applications": "DASFAA",
-  "ACM Symposium on Principles of Database Systems": "PODS",
+  "Principles of Database Systems": "PODS",
   "Asia Pacific Web Conference": "APWeb",
-  "The ACM Conference Series on Recommender Systems": "RecSys",
-  "International Conference on Mobile Data Management":"MDM",
-  "International Conference on Extending DB Technology":"EDBT",
-  "International Conference on Innovative Data Systems Research":"CIDR"
+  "Conference Series on Recommender Systems": "RecSys",
+  "Mobile Data Management":"MDM",
+  "Extending DB Technology":"EDBT",
+  "Extending Database Technology":"EDBT",
+  "Conference on Innovative Data Systems Research":"CIDR"
 }

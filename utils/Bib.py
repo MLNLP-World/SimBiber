@@ -41,6 +41,62 @@ class Bib:
         print("█" * (i // 2), "|Writing: {}%|100% ".format(i), end="")
         sys.stdout.flush()
 
+    def __simplify_bib__(self,item):
+        if 'archiveprefix' in item:
+            item['archivePrefix'] = item['archiveprefix']
+            del item['archiveprefix']
+            if 'primaryclass' in item:
+                item['primaryClass'] = item['primaryclass']
+                del item['primaryclass']
+            return item
+        if 'author' not in item:
+            return item
+        temp_item = {'ENTRYTYPE': item['ENTRYTYPE'],
+                     'ID': item['ID'],
+                     'author': item['author'],
+                     'title': item['title'], }
+        if 'year' in item:
+            temp_item['year'] = item['year']
+        if item['ENTRYTYPE'] == 'book':
+            if 'address' in item:
+                temp_item['address'] = item['address']
+            if 'publisher' in item:
+                temp_item['publisher'] = item['publisher']
+            return temp_item
+        if 'booktitle' in item:
+            booktitle = item['booktitle'].replace('\n', ' ').replace('\&', 'and')
+            booktitle = booktitle.replace('{', '').replace('}', '').replace('  ', ' ').replace('[', '').replace(']', '')
+            for key in self.pattern_list.keys():
+                m = re.search(key.lower(), booktitle.lower())
+                if m is not None:
+                    booktitle = 'Proc. of ' + self.pattern_list[key]
+                    break
+            temp_item['booktitle'] = booktitle
+
+        if 'journal' in item:
+            journal=item['journal']
+            temp = journal.replace('\n', ' ')
+            temp = temp.replace('{', '').replace('}', '').replace('  ', ' ').replace('[', '').replace(']', '')
+            if temp.lower()=='advances in neural information processing systems':
+                journal='Proc. of NeurIPS'
+            else:
+                m = re.search('AAAI', journal)
+                if m is not None:
+                    journal = 'Proc. of AAAI'
+
+            temp_item['journal'] = journal
+            return temp_item
+        return temp_item
+
+    def mark_duplicate(self,item):
+        if item['title'].lower() in self.dictionary:
+            temp_index = self.index
+            if 'booktitle' in item or ('journal' in item and not item['journal'].lower().find('arxiv')>=0):
+                temp_index = self.dictionary[item['title'].lower()]
+            self.bib_database.entries[temp_index] = '#'
+        else:
+            self.dictionary[item['title'].lower()] = self.index
+
     def simplify_bib(self,bib_string):
         parser = BibTexParser(common_strings=True)
         parser.ignore_nonstandard_types = True
@@ -50,63 +106,14 @@ class Bib:
         else:
             self.bib_database.entries += bibtexparser.loads(bib_string, parser=parser).entries
 
-
-
         while self.index < len(self.bib_database.entries):
-            # if self.args.remove_duplicate:
-            #     self.process_bar(index/len(self.bib_database.entries), start_str='', end_str='100%', total_length=15)
             item=self.bib_database.entries[self.index]
-            if 'archiveprefix' in item:
-                self.bib_database.entries[self.index]['archivePrefix'] = self.bib_database.entries[self.index]['archiveprefix']
-                del self.bib_database.entries[self.index]['archiveprefix']
-                if 'primaryclass' in item:
-                    self.bib_database.entries[self.index]['primaryClass'] = self.bib_database.entries[self.index]['primaryclass']
-                    del self.bib_database.entries[self.index]['primaryclass']
-                self.index+=1
-                continue
-            if 'author' not in item:
-                self.index += 1
-                continue
-            self.bib_database.entries[self.index] = {'ENTRYTYPE': item['ENTRYTYPE'],
-                                                'ID': item['ID'],
-                                                'author': item['author'],
-                                                'title': item['title'], }
-            if item['ENTRYTYPE'] == 'book':
-                if 'address' in item:
-                    self.bib_database.entries[self.index]['address'] = item['address']
-                if 'publisher' in item:
-                    self.bib_database.entries[self.index]['publisher'] = item['publisher']
-                if 'year' in item:
-                    self.bib_database.entries[self.index]['year'] = item['year']
-                self.index += 1
-                continue
-            if 'booktitle' in item:
-                booktitle = item['booktitle'].replace('\n', ' ').replace('\&', 'and')
-                booktitle = booktitle.replace('{', '').replace('}', '').replace('  ', ' ').replace('[', '').replace(']', '')
-                for key in self.pattern_list.keys():
-                    m = re.search(key, booktitle)
-                    if m is not None:
-                        booktitle = 'Proc. of ' + self.pattern_list[key]
-                        break
-                self.bib_database.entries[self.index]['booktitle'] = booktitle
-            if ('year' in item):
-                self.bib_database.entries[self.index]['year'] = item['year']
-            if self.args.remove_duplicate and 'booktitle' in item:
-                if item['title'].lower() in self.dictionary:
-                    self.bib_database.entries.pop(self.dictionary[item['title'].lower()])
-                else:
-                    self.dictionary[item['title'].lower()]=self.index
-            if 'journal' in item:
-                self.bib_database.entries[self.index]['journal'] = item['journal']
-                if self.args.remove_duplicate and item['journal'].lower().find('arxiv')>=0:
-                    if item['title'].lower() in self.dictionary:
-                        self.bib_database.entries.pop(self.index)
-                        continue
-                    else:
-                        self.dictionary[item['title'].lower()] = self.index
-                self.index += 1
-                continue
+            self.bib_database.entries[self.index]=self.__simplify_bib__(item)
+            if self.args.remove_duplicate:
+                self.mark_duplicate(item)
             self.index += 1
+        if self.args.remove_duplicate:
+            self.bib_database.entries=[x for x in self.bib_database.entries if x != '#']
 
     def write_to_file(self):
         writer = BibTexWriter()

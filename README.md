@@ -18,7 +18,7 @@
 </div>
 
 
-![version](https://img.shields.io/badge/version-v0.5.0-blue)
+![version](https://img.shields.io/badge/version-v0.5.1-blue)
 
 
 
@@ -57,7 +57,7 @@ git clone https://github.com/MLNLP-World/Simbiber.git
 pip install bibtexparser
 ```
 
-## Usage(v0.5.0)
+## Usage(v0.5.1)
 
 ```bash 
 python SimBiberParser.py --input_path data --config_path config --if_append_output False --cache_num 100 --remove_duplicate True

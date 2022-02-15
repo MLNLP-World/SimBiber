@@ -14,22 +14,23 @@ class Bib:
         self.dictionary={}
         self.bib_database = None
         self.index=0
-        self.pattern_list = self.read_pattern_config()
+        self.pattern_list,self.pattern_dict = self.read_pattern_config()
 
     def get_bib_text(self):
         return bibtexparser.dumps(self.bib_database)
 
     def read_pattern_config(self):
-        pattern_list={}
+        pattern_dict={}
         if os.path.isdir(self.args.config_path):
             for root, ds, fs in os.walk(self.args.config_path):
                 for f in fs:
                     with open(os.path.join(root, f), "r", encoding='utf-8') as f:
-                        pattern_list.update(json.loads(f.read()))
+                        pattern_dict.update(json.loads(f.read()))
         else:
             with open(self.args.config_path, "r", encoding='utf-8') as f:
-                pattern_list = json.loads(f.read())
-        return pattern_list
+                pattern_dict = json.loads(f.read())
+
+        return sorted(pattern_dict.keys(), key=len,reverse=True),pattern_dict
 
     def process_bar(self,percent, start_str='', end_str='', total_length=0):
         # bar = ''.join(["\033[31m%s\033[0m" % '   '] * int(percent * total_length)) + ''
@@ -66,10 +67,10 @@ class Bib:
         if 'booktitle' in item:
             booktitle = item['booktitle'].replace('\n', ' ').replace('\&', 'and')
             booktitle = booktitle.replace('{', '').replace('}', '').replace('  ', ' ').replace('[', '').replace(']', '')
-            for key in self.pattern_list.keys():
+            for key in self.pattern_list:
                 m = re.search(key.lower(), booktitle.lower())
                 if m is not None:
-                    booktitle = 'Proc. of ' + self.pattern_list[key]
+                    booktitle = 'Proc. of ' + self.pattern_dict[key]
                     break
             temp_item['booktitle'] = booktitle
 
@@ -120,4 +121,4 @@ class Bib:
         print("Writing...")
         with open(self.args.output_path, 'a', encoding='utf-8') as bibfile:
             bibfile.write(writer.write(self.bib_database))
-        print("Finished...")
+        print("Finished.")

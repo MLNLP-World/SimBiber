@@ -29,22 +29,26 @@ We introduce __SimBiber__, a simple tool in Python to simplify them automaticall
 We also highly recommend another wonderful tool for you [Rebiber](https://github.com/yuchenlin/rebiber), which is a tool for normalizing bibtex with official info.
 
 ## Changelog
+- **2021.02.15**
+  - Fix a bug simplify ***ACL (like EACL)** conference to ACL.
+  - Support **ACL Findings** and **EMNLP findings.**
 - **2021.01.21**
-  - Support to **remove duplication** if your bib has some bibitems with same title. (automatically choose Conference citation)
-  - Fix some bugs about some conferences.
-  - Add **more** categories of conferences. (now support <span style="color:red;"><b>113</b></span> conferences)
+  - <div style="color: #b0b0b0">Support to <b>remove duplication</b> if your bib has some bibitems with same title. (automatically choose Conference citation)</div>
+  - <del style="color: #b0b0b0">Fix some bugs about some conferences.</del>
+  - <div style="color: #b0b0b0">Add more categories of conferences. (now support 113 conferences)</div>
 - **2021.01.11**
-  - ~~Fix a bug if **output path is the same as input path**.~~
-  - ~~Support to **remove duplication** if your bib has both of arXiv or Conference citation.~~
-  - Support to simplify files **by folder**.
-  - Support to use **default** output path.
-  - ~~Add **more** categories of conferences. (now support 112 conferences)~~
+  - <del style="color: #b0b0b0">Fix a bug if output path is the same as input path.</del>
+  - <del style="color: #b0b0b0">Support to remove duplication if your bib has both of arXiv or Conference citation.</del>
+  - <div style="color: #b0b0b0">Support to simplify files <b>by folder</b>.</div>
+  - <div style="color: #b0b0b0">Support to use <b>default</b> output path.</div>
+  - <del style="color: #b0b0b0">Add more categories of conferences. (now support 112 conferences)</del>
 - **2021.01.08**
-  ~~We fix a bug if booktitle contains `{` or `}` and add more categories of conferences. (now support 105 conferences)~~
+  <del style="color: #b0b0b0">We fix a bug if booktitle contains `{` or `}` and add more categories of conferences. (now support 105 conferences)</del>
 - **2021.01.06**
-  ~~We fix a few minor bugs and add more categories of conferences. (now support 84 conferences)~~
+  <del style="color: #b0b0b0">We fix a few minor bugs and add more categories of conferences. (now support 84 conferences)</del>
 - **2021.12.31**
-  ~~We build the first version and release it.~~
+  <del style="color: #b0b0b0">We build the first version and release it.</del>
+
 
 ## Installation
 
@@ -61,10 +65,10 @@ python SimBiberParser.py --input_path data --config_path config --if_append_outp
 | argument | usage|
 | ----------- | ----------- |
 | `--input_path` | The path to the input bib `file` or `directory` that you want to simplify. |
-| `--output_path` | <span style="color:gray;font-size:10px;">[Optional]</span> The path to the output bib file that you want to save. <br/> <b>PLEASE ATTENTION:</b> <ul><li>It only works in simplify single bib file.</li><ul><li>If `output_path==input_path`, it will rewrite input file.</li></ul> <li>Without this param, it will be auto filled:<ul><li>If simplifying single bib `file`, it will rewrite input file;</li> <li>If simplifying bib `directory`, it will output to `./out` dir.</li></ul></li></ul>   |
+| `--output_path` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> The path to the output bib file that you want to save. <br/> <b>PLEASE ATTENTION:</b> <ul><li>It only works in simplify single bib file.</li><ul><li>If `output_path==input_path`, it will rewrite input file.</li></ul> <li>Without this param, it will be auto filled:<ul><li>If simplifying single bib `file`, it will rewrite input file;</li> <li>If simplifying bib `directory`, it will output to `./out` dir.</li></ul></li></ul>   |
 | `--config_path` | The path to the mapper config file. The path can be a file directory path, like `config` or a single file path, like `config.json`. <br/> <b>PLEASE ATTENTION:</b> If you want to simplify a huge bib file, you'd better extract external `json` config file to achieve satisfactory speed. |
-| `--if_append_output` | <span style="color:gray;font-size:10px;">[Optional]</span> Whether append simplified data to output bib file. |
-| `--remove_duplicate` | <span style="color:gray;font-size:10px;">[Optional]</span> Whether remove duplication if your bib has both of arXiv or Conference citation.<br/> <b>PLEASE ATTENTION:</b> If `True`, it might cost more time to write simplified bib file. Please keep patient.  |
+| `--if_append_output` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> Whether append simplified data to output bib file. |
+| `--remove_duplicate` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> Whether remove duplication if your bib has both of arXiv or Conference citation.<br/> <b>PLEASE ATTENTION:</b> If `True`, it might cost more time to write simplified bib file. Please keep patient.  |
 | `--cache_num` | The number of bib items you want to simplify at once.<br/> <b>PLEASE ATTENTION:</b> If you want to simplify a huge bib file, you'd better change it to achieve satisfactory speed. |
 
 

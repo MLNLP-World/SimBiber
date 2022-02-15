@@ -1,5 +1,7 @@
 {
   "Association for Computational Linguistics": "ACL",
+  "Findings of the Association for Computational Linguistics": "ACL Findings",
+  "Findings of the Association for Computational Linguistics: EMNLP": "EMNLP Findings",
   "Empirical Methods in Natural Language Processing": "EMNLP",
   "Natural Language Processing and Chinese Computing": "NLPCC",
   "International Conference on Acoustics, Speech and Signal Processing": "ICASSP",
@@ -11,7 +13,10 @@
   "North American Chapter of the Association for Computational Linguistics": "NAACL",
   "European Chapter of the ACL": "EACL",
   "European Chapter of the Association for Computational Linguistics": "EACL",
+  "EACL": "EACL",
   "Asian Chapter of the Association for Computational Linguistics": "AACL",
+  "AACL": "AACL",
+  "Asia-Pacific Chapter of the Association for Computational Linguistics": "AACL",
   "Conference on Computational Natural Language Learning": "CoNLL",
   "Annual Conference on Computational Learning Theory": "COLT",
   "International Conference on Neural Information Processing": "ICONIP",

@@ -18,7 +18,7 @@
 </div>
 
 
-![version](https://img.shields.io/badge/version-v0.5.1-blue)
+![version](https://img.shields.io/badge/version-v0.5.2-blue)
 
 
 
@@ -28,10 +28,14 @@ We introduce __SimBiber__, a simple tool in Python to simplify them automaticall
 
 We also highly recommend another wonderful tool for you [Rebiber](https://github.com/yuchenlin/rebiber), which is a tool for normalizing bibtex with official info.
 
+**Tips**:If you use Rebiber and then Simbiber can get a better experience.
+
 ## Changelog
+- **2021.03.02**
+  - Fix some bugs if remove duplications.
 - **2021.02.15**
-  - Fix a bug simplify ***ACL (like EACL)** conference to ACL.
-  - Support **ACL Findings** and **EMNLP findings.**
+  - <del style="color: #b0b0b0">Fix a bug simplify <b>ACL (like EACL)</b> conference to ACL.</del>
+  - <div style="color: #b0b0b0">Support <b>ACL Findings</b> and <b>EMNLP findings.</b></div>
 - **2021.01.21**
   - <div style="color: #b0b0b0">Support to <b>remove duplication</b> if your bib has some bibitems with same title. (automatically choose Conference citation)</div>
   - <del style="color: #b0b0b0">Fix some bugs about some conferences.</del>
@@ -75,13 +79,13 @@ python SimBiberParser.py --input_path data --config_path config --if_append_outp
 ## Example Input and Output
 An example simplified output entry with the official information (The forms of bibitem like `xxx="..."` or `xxx={...}` are both supported):
 ```bib
-@inproceedings{qin-etal-2019-stack,
-    title = "A Stack-Propagation Framework with Token-Level Intent Detection for Spoken Language Understanding",
-    author = "Qin, Libo  and
-      Che, Wanxiang  and
-      Li, Yangming  and
-      Wen, Haoyang  and
-      Liu, Ting",
+@inproceedings{li-etal-2019-survey,
+    title = "A Sophisticated Survey about Chinese Poem and Beers",
+    author = "Li, Bai  and
+     Ha, Pi  and
+     Jin, Shibai  and
+     Xue, Hua  and
+     Mao, Tai",
     booktitle = "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
     month = nov,
     year = "2019",
@@ -97,14 +101,14 @@ An example simplified output entry with the official information (The forms of b
 
 An example simplified output entry from the official information:
 ```bib
-@inproceedings{qin-etal-2019-stack,
-    author = {Qin, Libo  and
-     Che, Wanxiang  and
-     Li, Yangming  and
-     Wen, Haoyang  and
-     Liu, Ting},
+@inproceedings{li-etal-2019-survey,
+    author = {Li, Bai  and
+     Ha, Pi  and
+     Jin, Shibai  and
+     Xue, Hua  and
+     Mao, Tai},
     booktitle = {Proc. of EMNLP},
-    title = {A Stack-Propagation Framework with Token-Level Intent Detection for Spoken Language Understanding},
+    title = {A Sophisticated Survey about Chinese Poem and Beers},
     year = {2019}
 }
 ```

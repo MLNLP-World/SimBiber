@@ -109,10 +109,13 @@ class Bib:
 
         while self.index < len(self.bib_database.entries):
             item=self.bib_database.entries[self.index]
-            self.bib_database.entries[self.index]=self.__simplify_bib__(item)
-            if self.args.remove_duplicate:
-                self.mark_duplicate(item)
+            if item!='#':
+                self.bib_database.entries[self.index]=self.__simplify_bib__(item)
+                if self.args.remove_duplicate:
+                    self.mark_duplicate(item)
             self.index += 1
+
+    def remove_duplication(self):
         if self.args.remove_duplicate:
             self.bib_database.entries=[x for x in self.bib_database.entries if x != '#']
 

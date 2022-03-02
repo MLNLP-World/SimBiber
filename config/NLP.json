@@ -4,8 +4,10 @@
   "Findings of the Association for Computational Linguistics: EMNLP": "EMNLP Findings",
   "Empirical Methods in Natural Language Processing": "EMNLP",
   "Natural Language Processing and Chinese Computing": "NLPCC",
+  "NLPCC": "NLPCC",
   "International Conference on Acoustics, Speech and Signal Processing": "ICASSP",
   "International Conference on Acoustics, Speech, & Signal Processing": "ICASSP",
+  "ICASSP": "ICASSP",
   "Chinese Computational Linguistics": "CCL",
   "COLING": "COLING",
   "Workshop on Representation Learning for NLP": "RepL4NLP",
@@ -32,6 +34,7 @@
   "Arabic Natural Language Processing Workshop": "WANLP",
   "Workshop on Online Abuse and Harms": "WOAH",
   "Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis": "WASSA",
-  "Conference of the International Speech Communication Association":"INTERSPEECH"
+  "Conference of the International Speech Communication Association":"INTERSPEECH",
+  "Interspeech": "Interspeech"
 
 }

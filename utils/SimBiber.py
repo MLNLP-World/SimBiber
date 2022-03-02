@@ -51,6 +51,7 @@ class SimBiber():
                     index = 0
             if index != 0:
                 self.__simplify_and_write__(s)
+        self.bib.remove_duplication()
         self.bib.write_to_file()
         if self.use_temp_file:
             self.__rewrite__()

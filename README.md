@@ -1,5 +1,5 @@
 <div align="center">
-<img src="figure/MLNLP.png" alt=" " style="width:90%" />
+<img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/MLNLP.png" alt=" " style="width:90%" />
 <h2>SimBiber: A tool for simplifying bibtex with official info.</h2>
 
 ------
@@ -18,7 +18,10 @@
 </div>
 
 
-![version](https://img.shields.io/badge/version-v0.5.2-blue)
+![version](https://img.shields.io/badge/version-v0.7.0-blue)
+![License](https://shields.mitmproxy.org:/pypi/l/simbiber)
+[![Latest Version](https://shields.mitmproxy.org:/pypi/v/simbiber?color=gre)](https://pypi.python.org/pypi/simbiber)
+[![Supported Python versions](https://shields.mitmproxy.org/pypi/pyversions/simbiber.svg)](https://pypi.python.org/pypi/simbiber)
 
 
 
@@ -30,9 +33,28 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
 
 **Tips**:If you use Rebiber and then Simbiber can get a better experience.
 
+<div style="background-color: white;display: inline-block;vertical-align: top;width: 100%;border-radius: 16px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.11), 0 6px 20px 0 rgba(0,0,0,0.11);">
+  <h2 style="background-color: rgba(115,175,125,0.72);width: 100%;padding: 10px;padding-left:20px;margin: 0px;border-radius: 16px 16px 0 0 ;">Disclaimer</h2>
+  <p style="padding: 0 20px 0 20px;color: #444444;letter-spacing: 1.15px;">
+    SimBiber is a fairly new project and it is under active development. 
+    We hope that it will be quite useful in a variety of cases, but there is no guarantee that the results it produces will necessarily be strictly compliant with the official specification.
+  </p>
+  <div style="padding: 0 20px 20px 20px;color: red">
+    <b>So you'd better check the accuracy of simplified bib files again.</b>
+  </div>
+</div>
+
+
+
+
 ## Changelog
+
+- **2021.04.11**
+  - Support to pip install.
+  - Simplify input args.
+  - Add disclaimer.
 - **2021.03.02**
-  - Fix some bugs if remove duplications.
+  - <del style="color: #b0b0b0">Fix some bugs if remove duplications.</del>
 - **2021.02.15**
   - <del style="color: #b0b0b0">Fix a bug simplify <b>ACL (like EACL)</b> conference to ACL.</del>
   - <div style="color: #b0b0b0">Support <b>ACL Findings</b> and <b>EMNLP findings.</b></div>
@@ -56,24 +78,37 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
 
 ## Installation
 
-```python
+```bash 
 git clone https://github.com/MLNLP-World/Simbiber.git
-pip install bibtexparser
+cd Simbiber/
+pip install -e .
+```
+OR
+```bash  
+pip install simbiber
 ```
 
-## Usage(v0.5.1)
+If you would like to use the latest github version with more bug fixes, please use the first installation method.
+
+Finally, if you run ``simbiber`` without any args, you get the following result, then the installation is successful!
+
+<img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/success.jpg" alt=" " style="width:90%" />
+
+## Usage(v0.7.0)
 
 ```bash 
-python SimBiberParser.py --input_path data --config_path config --if_append_output False --cache_num 100 --remove_duplicate True
+simbiber -i [input bib path] -o [output bib path]
 ```
-| argument | usage|
-| ----------- | ----------- |
-| `--input_path` | The path to the input bib `file` or `directory` that you want to simplify. |
-| `--output_path` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> The path to the output bib file that you want to save. <br/> <b>PLEASE ATTENTION:</b> <ul><li>It only works in simplify single bib file.</li><ul><li>If `output_path==input_path`, it will rewrite input file.</li></ul> <li>Without this param, it will be auto filled:<ul><li>If simplifying single bib `file`, it will rewrite input file;</li> <li>If simplifying bib `directory`, it will output to `./out` dir.</li></ul></li></ul>   |
-| `--config_path` | The path to the mapper config file. The path can be a file directory path, like `config` or a single file path, like `config.json`. <br/> <b>PLEASE ATTENTION:</b> If you want to simplify a huge bib file, you'd better extract external `json` config file to achieve satisfactory speed. |
-| `--if_append_output` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> Whether append simplified data to output bib file. |
-| `--remove_duplicate` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> Whether remove duplication if your bib has both of arXiv or Conference citation.<br/> <b>PLEASE ATTENTION:</b> If `True`, it might cost more time to write simplified bib file. Please keep patient.  |
-| `--cache_num` | The number of bib items you want to simplify at once.<br/> <b>PLEASE ATTENTION:</b> If you want to simplify a huge bib file, you'd better change it to achieve satisfactory speed. |
+Tips: All path args support absolute and relative paths
+
+| simplified | argument | usage|
+|------ | ----------- | ----------- |
+|`-i`| `--input_path` | The path to the input bib `file` or `directory` that you want to simplify. |
+|`-o`| `--output_path` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> The path to the output bib file that you want to save. <br/> <b>PLEASE ATTENTION:</b> <ul><li>It only works in simplify single bib file.</li><ul><li>If `output_path==input_path`, it will rewrite input file.</li></ul> <li>Without this param, it will be auto filled:<ul><li>If simplifying single bib `file`, it will rewrite input file;</li> <li>If simplifying bib `directory`, it will output to `./out` dir.</li></ul></li></ul>   |
+|`-c`| `--config_path` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span>The path to the mapper config file. The path can be a file directory path, like `config` or a single file path, like `config.json`. <br/> <b>PLEASE ATTENTION:</b> If you want to simplify a huge bib file, you'd better extract external `json` config file to achieve satisfactory speed. |
+|`-a`| `--if_append_output` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> Whether append simplified data to output bib file. |
+|`-r`| `--remove_duplicate` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> Whether remove duplication if your bib has both of arXiv or Conference citation.<br/> <b>PLEASE ATTENTION:</b> If `True`, it might cost more time to write simplified bib file. Please keep patient.  |
+|`-cch`| `--cache_num` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span>The number of bib items you want to simplify at once.<br/> <b>PLEASE ATTENTION:</b> If you want to simplify a huge bib file, you'd better change it to achieve satisfactory speed. |
 
 
 ## Example Input and Output
@@ -291,7 +326,7 @@ Take ICLR as an example:
 
 - Step 1: Go to [DBLP](https://dblp.org/db/conf/iclr/iclr2020.html) 
 - Step 2: Find the full name of Conference
-- Step 3: Add map to ```parserConfig.json```
+- Step 3: Add map to ```config/ML.json``` or ```parserConfig.json```(You should specify the config path)
 ```json
 {"International Conference on Learning Representations": "ICLR"}
 ```
@@ -315,9 +350,3 @@ Thanks to the contributors:
 
 [Yilun Jin](https://github.com/kl4805); [Yuchen Fang](https://github.com/LMissher); [Yiheng Shu](https://yihengshu.github.io/); [Yichao Du](https://github.com/duyichao); [Ryder](https://github.com/ryderling); [Xupeng Miao](https://hsword.github.io); [Jiawei Liu](https://github.com/LauJames); [Guangke Chen](http://guangkechen.site/); [Guanqi Zhu](https://github.com/ustc-zhu)
 
-## Disclaimer
-
-SimBiber is a fairly new project and it is under active development. 
-We hope that it will be quite useful in a variety of cases, but there is no guarantee that the results it produces will necessarily be strictly compliant with the official specification.
-
-<div style="color: red"><b>So you'd better check the accuracy of simplified bib files again.</b></div>

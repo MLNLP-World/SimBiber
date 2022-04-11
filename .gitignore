@@ -3,4 +3,10 @@ target/
 */__pycache__/
 .DS_Store
 */.DS_Store
-test/
+*/test/
+__pycache__/
+*/simbiber.egg-info
+simbiber.egg-info/
+build/
+dist/
+pyproject.toml

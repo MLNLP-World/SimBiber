@@ -7,7 +7,7 @@ from bibtexparser.bwriter import BibTexWriter
 import json
 import re
 import os
-class Bib:
+class BibTool:
     # Assume that bib_string has valid structure
     def __init__(self, args):
         self.args = args
@@ -24,23 +24,13 @@ class Bib:
         if os.path.isdir(self.args.config_path):
             for root, ds, fs in os.walk(self.args.config_path):
                 for f in fs:
-                    with open(os.path.join(root, f), "r", encoding='utf-8') as f:
-                        pattern_dict.update(json.loads(f.read()))
+                    with open(root + "/" + f.strip(), "r", encoding='utf-8') as load_f:
+                        pattern_dict.update(json.load(load_f))
         else:
-            with open(self.args.config_path, "r", encoding='utf-8') as f:
-                pattern_dict = json.loads(f.read())
+            with open(self.args.config_path, "r", encoding='utf-8') as load_f:
+                pattern_dict = json.loads(load_f)
 
         return sorted(pattern_dict.keys(), key=len,reverse=True),pattern_dict
-
-    def process_bar(self,percent, start_str='', end_str='', total_length=0):
-        # bar = ''.join(["\033[31m%s\033[0m" % '   '] * int(percent * total_length)) + ''
-        # bar = '\r' + start_str + bar.ljust(total_length) + ' {:0>4.1f}%|'.format(percent * 100) + end_str
-        # print(bar, end='', flush=True)
-        # sys.stdout.write(bar)
-        print("\r", end="")
-        i=int(percent*100)
-        print("█" * (i // 2), "|Writing: {}%|100% ".format(i), end="")
-        sys.stdout.flush()
 
     def __simplify_bib__(self,item):
         if 'archiveprefix' in item:

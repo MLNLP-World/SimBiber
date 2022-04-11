@@ -1,0 +1,18 @@
+{
+  "AAAI": "AAAI",
+  "Association for Computational Linguistics": "ACL",
+  "International Conference on Learning Representations": "ICLR",
+  "International Conference on Machine Learning": "ICML",
+  "Empirical Methods in Natural Language Processing": "EMNLP",
+  "Neural Information Processing Systems": "NeuIPS",
+  "Natural Language Processing and Chinese Computing": "NLPCC",
+  "International Conference on Acoustics, Speech and Signal Processing": "ICASSP",
+  "Chinese Computational Linguistics": "CCL",
+  "{SIG}dial Meeting on Discourse and Dialogue": "SIGDIAL",
+  "{SIG}dial": "SIGDIAL",
+  "SIGDIAL": "SIGDIAL",
+  "Language Resources and Evaluation Conference": "LREC",
+  "International Workshop on Semantic Evaluation":"SemEval",
+  "COLING": "COLING",
+  "International Conference on Computational Linguistics": "COLING"
+}

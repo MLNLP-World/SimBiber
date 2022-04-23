@@ -42,6 +42,7 @@
     </p>
 </div>
 
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/motivation.png" width="25" /> Motivation
 We often need to simplify the official bib that consists of many information into a shorter version that only maintains necessary information (e.g., author, title, conference/journal name and etc) due to page limitation.
 
 We introduce __SimBiber__, a simple tool in Python to simplify them automatically. Hope it's helpful for you.
@@ -57,7 +58,7 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
 > 
 > **So you'd better check the accuracy of simplified bib files again.**
 > 
-> All icons are collected from the Internet, if there is any infringement, please contact us to delete
+> All icons are collected from the Internet, if there is any infringement, please contact us to delete.
 
 
 
@@ -111,7 +112,7 @@ Finally, if you run ``simbiber`` without any args, you get the following result,
 
 <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/success.jpg" alt=" " style="width:90%" />
 
-## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/motivation.png" width="27" /> Usage(v0.7.1)
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/catalogue.png" width="27" /> Usage(v0.7.1)
 
 ```bash 
 simbiber -i [input bib path] -o [output bib path]
@@ -165,7 +166,7 @@ An example simplified output entry from the official information:
 }
 ```
 
-## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/catalogue.png" width="25" /> Supported Conferences 
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/folders.png" width="25" /> Supported Conferences 
 
 The `config` dir contains a list of converted json files of the mapper between official full name and simplified name.
 

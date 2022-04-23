@@ -60,7 +60,12 @@ class BibTool:
             for key in self.pattern_list:
                 m = re.search(key.lower(), booktitle.lower())
                 if m is not None:
-                    booktitle = 'Proc. of ' + self.pattern_dict[key]
+                    conference=self.pattern_dict[key]
+                    if conference=='IJCAI':
+                        if item['note'] is not None and item['note'].lower() == 'Survey Track'.lower():
+                            conference+='(Survey Track)'
+                    booktitle = 'Proc. of ' + conference
+
                     break
             temp_item['booktitle'] = booktitle
 

@@ -1,9 +1,34 @@
-<div align="center">
-<img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/MLNLP.png" alt=" " style="width:90%" />
-<h2>SimBiber: A tool for simplifying bibtex with official info.</h2>
+<div>
+  <h2 align="center">
+    <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/ai.png" width="30" />
+      SimBiber: A tool for simplifying bibtex with official info.
+  </h2>
+</div>
+<p align="center">
+  	<a href="https://img.shields.io/badge/version-v0.7.1-blue">
+      <img alt="version" src="https://img.shields.io/badge/version-v0.7.0-blue?color=FF8000?color=009922" />
+    </a>
+  <a >
+       <img alt="Status-building" src="https://img.shields.io/badge/Status-building-blue" />
+  	</a>
+  <a >
+       <img alt="PRs-Welcome" src="https://img.shields.io/badge/PRs-Welcome-red" />
+  	</a>
+   	<a href="https://github.com/MLNLP-World/SimBiber/stargazers">
+       <img alt="stars" src="https://img.shields.io/github/stars/MLNLP-World/SimBiber" />
+  	</a>
+  	<a href="https://github.com/MLNLP-World/SimBiber/network/members">
+       <img alt="FORK" src="https://img.shields.io/github/forks/MLNLP-World/SimBiber?color=FF8000" />
+  	</a>
+    <a href="https://github.com/MLNLP-World/SimBiber/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/MLNLP-World/SimBiber?color=0088ff"/>
+    </a>
+    <br />
+</p>
 
 ------
 
+<div>
 <p align="center">
       <a href="#Changelog">Changelog</a> •
       <a href="#Installation">Installation</a> •
@@ -13,17 +38,9 @@
       <a href="#Adding a new conference">Adding a new conference</a> •
       <a href="#Contact">Contact</a> •
       <a href="#Organizers">Organizers</a> •
-      <a href="#Contributors">Contributors</a> •
+      <a href="#Contributors">Contributors</a> 
     </p>
 </div>
-
-
-![version](https://img.shields.io/badge/version-v0.7.0-blue)
-![License](https://shields.mitmproxy.org:/pypi/l/simbiber)
-[![Latest Version](https://shields.mitmproxy.org:/pypi/v/simbiber?color=gre)](https://pypi.python.org/pypi/simbiber)
-[![Supported Python versions](https://shields.mitmproxy.org/pypi/pyversions/simbiber.svg)](https://pypi.python.org/pypi/simbiber)
-
-
 
 We often need to simplify the official bib that consists of many information into a shorter version that only maintains necessary information (e.g., author, title, conference/journal name and etc) due to page limitation.
 
@@ -31,28 +48,28 @@ We introduce __SimBiber__, a simple tool in Python to simplify them automaticall
 
 We also highly recommend another wonderful tool for you [Rebiber](https://github.com/yuchenlin/rebiber), which is a tool for normalizing bibtex with official info.
 
-**Tips**:If you use Rebiber and then Simbiber can get a better experience.
+**Tips**: If you use first Rebiber and then Simbiber, you can get a better experience.
 
-<div style="background-color: white;display: inline-block;vertical-align: top;width: 100%;border-radius: 16px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.11), 0 6px 20px 0 rgba(0,0,0,0.11);">
-  <h2 style="background-color: rgba(115,175,125,0.72);width: 100%;padding: 10px;padding-left:20px;margin: 0px;border-radius: 16px 16px 0 0 ;">Disclaimer</h2>
-  <p style="padding: 0 20px 0 20px;color: #444444;letter-spacing: 1.15px;">
-    SimBiber is a fairly new project and it is under active development. 
+##<img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/disclaimer2.png" width="25" /> Disclaimer
+
+> SimBiber is a fairly new project and it is under active development. 
     We hope that it will be quite useful in a variety of cases, but there is no guarantee that the results it produces will necessarily be strictly compliant with the official specification.
-  </p>
-  <div style="padding: 0 20px 20px 20px;color: red">
-    <b>So you'd better check the accuracy of simplified bib files again.</b>
-  </div>
-</div>
+> 
+> **So you'd better check the accuracy of simplified bib files again.**
+> 
+> All resource files are collected from the Internet, if there is any infringement, please contact us to delete
 
 
 
 
-## Changelog
-
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/notes.png" width="25" /> Changelog
+- **2021.04.23**
+  - Support to IJCAI (Survey Track).
+  - Beautify README.
 - **2021.04.11**
-  - Support to pip install.
-  - Simplify input args.
-  - Add disclaimer.
+  - <div style="color: #b0b0b0">Support to <b>pip install</b>.</div>
+  - <div style="color: #b0b0b0">Simplify input args.</div>
+  - <div style="color: #b0b0b0">Add disclaimer.</div>
 - **2021.03.02**
   - <del style="color: #b0b0b0">Fix some bugs if remove duplications.</del>
 - **2021.02.15**
@@ -76,7 +93,7 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
   <del style="color: #b0b0b0">We build the first version and release it.</del>
 
 
-## Installation
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/install2.png" width="25" /> Installation
 
 ```bash 
 git clone https://github.com/MLNLP-World/Simbiber.git
@@ -94,7 +111,7 @@ Finally, if you run ``simbiber`` without any args, you get the following result,
 
 <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/success.jpg" alt=" " style="width:90%" />
 
-## Usage(v0.7.0)
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/usage2.png" width="27" /> Usage(v0.7.1)
 
 ```bash 
 simbiber -i [input bib path] -o [output bib path]
@@ -111,7 +128,7 @@ Tips: All path args support absolute and relative paths
 |`-cch`| `--cache_num` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span>The number of bib items you want to simplify at once.<br/> <b>PLEASE ATTENTION:</b> If you want to simplify a huge bib file, you'd better change it to achieve satisfactory speed. |
 
 
-## Example Input and Output
+### Example Input and Output
 An example simplified output entry with the official information (The forms of bibitem like `xxx="..."` or `xxx={...}` are both supported):
 ```bib
 @inproceedings{li-etal-2019-survey,
@@ -148,8 +165,7 @@ An example simplified output entry from the official information:
 }
 ```
 
-
-## Supported Conferences 
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/conferences2.png" width="25" /> Supported Conferences 
 
 The `config` dir contains a list of converted json files of the mapper between official full name and simplified name.
 
@@ -173,6 +189,7 @@ The `config` dir contains a list of converted json files of the mapper between o
 |International Conference on Robotics and Automation|ICRA|
 |International Conference on Tools with Artificial Intelligence|ICTAI|
 |International Joint Conference on Artificial Intelligence|IJCAI|
+|International Joint Conference on Artificial Intelligence (Survey Track)|IJCAI(Survey Track)|
 |International Joint Conference on Neural Networks|IJCNN|
 |International Conference on Intelligent Robots and Systems|IROS|
 |International Conference on Principles of Knowledge Representation and Reasoning|KR|
@@ -318,7 +335,7 @@ The `config` dir contains a list of converted json files of the mapper between o
 |Usenix Security Symposium|USENIX Security|
 
 
-## Adding a new conference
+### Adding a new conference
 
 You can manually add any conferences from DBLP to config map.
 
@@ -331,22 +348,49 @@ Take ICLR as an example:
 {"International Conference on Learning Representations": "ICLR"}
 ```
 
-## Contact
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/contact.png" width="25" /> Contact
 
 Please email [Libo Qin](mailto:lbqin@ir.hit.edu.cn) or [Qiguang Chen](mailto:charleschen2333@gmail.com) to create Github issues here if you have any questions or suggestions. 
 
 And we welcome you to join us and update conferences at https://docs.qq.com/sheet/DWFF1aWlVV1hISU12?tab=h2idmj 
 
-## Organizers
-[Libo Qin](http://ir.hit.edu.cn/~lbqin/); [Qiguang Chen](https://github.com/LightChen233); [Qian Liu](https://siviltaram.github.io/); 
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/contributor.png" width="25" /> Organizers
 
-## Contributors
+<a href="https://github.com/yizhen20133868">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Libo Qin.png"  width="80" > </a> 
+<a href="https://github.com/LightChen233">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Qiguang Chen2.png"  width="75" > </a> 
+<a href="https://github.com/SivilTaram">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Qian.png"  width="80" > </a> 
+
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/contributor2.png" width="25" /> Contributors
 
 Thanks to the contributors:
 
-[Qi Jia](https://github.com/JiaQiSJTU); [Guanglin Niu](https://github.com/ngl567); [bravery](https://github.com/braveryCHR); [Xiao Xu](https://github.com/LooperXX); [Ruibo Liu](https://github.com/DapangLiu); [Shaolei Zhang](https://github.com/Vily1998); [Shiwen Ni](https://github.com/nishiwen1214);  [Qiming Bao](https://github.com/14H034160212); [Haoyu He](https://github.com/Cli212); [Xuan Zhang](https://github.com/Xzhang1995); 
-
-[Shining Liang](https://github.com/shiningliang); [Ziyu Jia](https://github.com/ziyujia); [Xin Guo](https://github.com/XinGuoZJU); [Chengbin Hou](https://github.com/houchengbin); [Yuanqi Du](https://yuanqidu.github.io/); [Runze Fan](https://rzfan525.github.io/); [Zayne](https://github.com/ZiYueZH); [Zhiqing Guo](https://github.com/EricGzq); [Jiakai Wang](https://github.com/buaa0110); [Pandeng Li](https://github.com/rovgtjktm66); 
-
-[Yilun Jin](https://github.com/kl4805); [Yuchen Fang](https://github.com/LMissher); [Yiheng Shu](https://yihengshu.github.io/); [Yichao Du](https://github.com/duyichao); [Ryder](https://github.com/ryderling); [Xupeng Miao](https://hsword.github.io); [Jiawei Liu](https://github.com/LauJames); [Guangke Chen](http://guangkechen.site/); [Guanqi Zhu](https://github.com/ustc-zhu)
+<a href="https://github.com/JiaQiSJTU"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/JiaQiSJTU.png"  width="60" ></a>
+<a href="https://github.com/ngl567"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/ngl567.png"  width="60" ></a>
+<a href="https://github.com/braveryCHR"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/braveryCHR.png"  width="62" ></a>
+<a href="https://github.com/LooperXX"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Xiao Xu.png"  width="69" ></a>
+<a href="https://github.com/DapangLiu"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/DapangLiu.png"  width="66" ></a>
+<a href="https://github.com/Vily1998"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Vily1998.png"  width="60" ></a>
+<a href="https://github.com/nishiwen1214"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/nishiwen1214.png"  width="60" ></a>
+<a href="https://github.com/14H034160212"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/14H034160212.png"  width="60" ></a>
+<a href="https://github.com/Cli212"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Cli212.png"  width="60" ></a>
+<a href="https://github.com/Xzhang1995"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Xzhang1995.png"  width="60" ></a>
+<a href="https://github.com/shiningliang"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/shiningliang.png"  width="60" ></a>
+<a href="https://github.com/ziyujia"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/ziyujia.png"  width="60" ></a>
+<a href="https://github.com/XinGuoZJU"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/XinGuoZJU.png"  width="60" ></a>
+<a href="https://github.com/houchengbin"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/houchengbin.png"  width="60" ></a>
+<a href="https://github.com/yuanqidu"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/yuanqidu.png"  width="60" ></a>
+<a href="https://github.com/rzfan525"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/rzfan525.png"  width="60" ></a>
+<a href="https://github.com/ZiYueZH"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/ZiYueZH.png"  width="60" ></a>
+<a href="https://github.com/EricGzq"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/EricGzq.png"  width="60" ></a>
+<a href="https://github.com/buaa0110"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/buaa0110.png"  width="60" ></a>
+<a href="https://github.com/rovgtjktm66"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/rovgtjktm66.png"  width="60" ></a>
+<a href="https://github.com/kl4805"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/kl4805.png"  width="60" ></a>
+<a href="https://github.com/LMissher"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/LMissher.png"  width="60" ></a>
+<a href="https://github.com/yihengshu"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/yihengshu.png"  width="60" ></a>
+<a href="https://github.com/duyichao"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/duyichao.png"  width="60" ></a>
+<a href="https://github.com/ryderling"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/ryderling.png"  width="60" ></a>
+<a href="https://github.com/hsword"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/hsword.png"  width="60" ></a>
+<a href="https://github.com/LauJames"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/LauJames.png"  width="60" ></a>
+<a href="http://guangkechen.site"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/guangkechen.png"  width="60" ></a>
+<a href="http://https://github.com/ustc-zhu"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/ustc-zhu.png"  width="60" ></a>
 

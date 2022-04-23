@@ -64,8 +64,8 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
 
 ## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/notes.png" width="25" /> Changelog
 - **2021.04.23**
-  - Support to IJCAI (Survey Track).
-  - Beautify README.
+  - Support IJCAI (Survey Track).
+  - Unified README.
 - **2021.04.11**
   - <div style="color: #b0b0b0">Support to <b>pip install</b>.</div>
   - <div style="color: #b0b0b0">Simplify input args.</div>
@@ -93,7 +93,7 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
   <del style="color: #b0b0b0">We build the first version and release it.</del>
 
 
-## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/install2.png" width="25" /> Installation
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/resource.png" width="25" /> Installation
 
 ```bash 
 git clone https://github.com/MLNLP-World/Simbiber.git
@@ -111,7 +111,7 @@ Finally, if you run ``simbiber`` without any args, you get the following result,
 
 <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/success.jpg" alt=" " style="width:90%" />
 
-## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/usage2.png" width="27" /> Usage(v0.7.1)
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/motivation.png" width="27" /> Usage(v0.7.1)
 
 ```bash 
 simbiber -i [input bib path] -o [output bib path]
@@ -165,7 +165,7 @@ An example simplified output entry from the official information:
 }
 ```
 
-## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/conferences2.png" width="25" /> Supported Conferences 
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/catalogue.png" width="25" /> Supported Conferences 
 
 The `config` dir contains a list of converted json files of the mapper between official full name and simplified name.
 
@@ -348,20 +348,19 @@ Take ICLR as an example:
 {"International Conference on Learning Representations": "ICLR"}
 ```
 
-## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/contact.png" width="25" /> Contact
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/intro.png" width="25" /> Contact
 
 Please email [Libo Qin](mailto:lbqin@ir.hit.edu.cn) or [Qiguang Chen](mailto:charleschen2333@gmail.com) to create Github issues here if you have any questions or suggestions. 
 
 And we welcome you to join us and update conferences at https://docs.qq.com/sheet/DWFF1aWlVV1hISU12?tab=h2idmj 
 
-## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/contributor.png" width="25" /> Organizers
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/organizer.png" width="25" /> Organizers
 
 <a href="https://github.com/yizhen20133868">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Libo Qin.png"  width="80" > </a> 
 <a href="https://github.com/LightChen233">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Qiguang Chen2.png"  width="75" > </a> 
 <a href="https://github.com/SivilTaram">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Qian.png"  width="80" > </a> 
 
-## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/contributor2.png" width="25" /> Contributors
-
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/heart.png" width="25" /> Contributors
 Thanks to the contributors:
 
 <a href="https://github.com/LightChen233">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Qiguang Chen2.png"  width="65" > </a> 

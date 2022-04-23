@@ -50,7 +50,7 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
 
 **Tips**: If you use first Rebiber and then Simbiber, you can get a better experience.
 
-##<img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/disclaimer2.png" width="25" /> Disclaimer
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/disclaimer2.png" width="25" /> Disclaimer
 
 > SimBiber is a fairly new project and it is under active development. 
     We hope that it will be quite useful in a variety of cases, but there is no guarantee that the results it produces will necessarily be strictly compliant with the official specification.
@@ -364,6 +364,10 @@ And we welcome you to join us and update conferences at https://docs.qq.com/shee
 
 Thanks to the contributors:
 
+<a href="https://github.com/LightChen233">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Qiguang Chen2.png"  width="65" > </a> 
+<a href="https://github.com/yizhen20133868">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Libo Qin.png"  width="69" > </a>
+<a href="https://github.com/SivilTaram">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Qian.png"  width="69" > </a> 
+<a href="http://xcfeng.net/">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/XiaChong Feng.png"  width="60" > </a>
 <a href="https://github.com/JiaQiSJTU"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/JiaQiSJTU.png"  width="60" ></a>
 <a href="https://github.com/ngl567"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/ngl567.png"  width="60" ></a>
 <a href="https://github.com/braveryCHR"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/braveryCHR.png"  width="62" ></a>

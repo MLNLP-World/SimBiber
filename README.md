@@ -57,7 +57,7 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
 > 
 > **So you'd better check the accuracy of simplified bib files again.**
 > 
-> All resource files are collected from the Internet, if there is any infringement, please contact us to delete
+> All icons are collected from the Internet, if there is any infringement, please contact us to delete
 
 
 

@@ -5,8 +5,8 @@
   </h2>
 </div>
 <p align="center">
-  	<a href="https://img.shields.io/badge/version-v0.7.1-blue">
-      <img alt="version" src="https://img.shields.io/badge/version-v0.7.0-blue?color=FF8000?color=009922" />
+  	<a href="https://img.shields.io/badge/version-v0.8.0-blue">
+      <img alt="version" src="https://img.shields.io/badge/version-v0.8.0-blue?color=FF8000?color=009922" />
     </a>
   <a >
        <img alt="Status-building" src="https://img.shields.io/badge/Status-building-blue" />
@@ -64,9 +64,11 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
 
 
 ## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/notes.png" width="25" /> Changelog
+- **2021.05.01**
+  - Support to customize the keys you want to reserve.
 - **2021.04.23**
-  - Support IJCAI (Survey Track).
-  - Unified README.
+  - <div style="color: #b0b0b0">Support IJCAI (Survey Track).</div>
+  - <div style="color: #b0b0b0">Unified README.</div>
 - **2021.04.11**
   - <div style="color: #b0b0b0">Support to <b>pip install</b>.</div>
   - <div style="color: #b0b0b0">Simplify input args.</div>
@@ -112,10 +114,10 @@ Finally, if you run ``simbiber`` without any args, you get the following result,
 
 <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/success.jpg" alt=" " style="width:90%" />
 
-## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/catalogue.png" width="27" /> Usage(v0.7.1)
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/catalogue.png" width="27" /> Usage(v0.8.0)
 
 ```bash 
-simbiber -i [input bib path] -o [output bib path]
+simbiber -i [input bib path] -o [output bib path] 
 ```
 Tips: All path args support absolute and relative paths
 
@@ -127,7 +129,7 @@ Tips: All path args support absolute and relative paths
 |`-a`| `--if_append_output` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> Whether append simplified data to output bib file. |
 |`-r`| `--remove_duplicate` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> Whether remove duplication if your bib has both of arXiv or Conference citation.<br/> <b>PLEASE ATTENTION:</b> If `True`, it might cost more time to write simplified bib file. Please keep patient.  |
 |`-cch`| `--cache_num` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span>The number of bib items you want to simplify at once.<br/> <b>PLEASE ATTENTION:</b> If you want to simplify a huge bib file, you'd better change it to achieve satisfactory speed. |
-
+|`-keep`| `--keep_keys` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span>The keys you want to keep in every bib item.<br/>The total form is like `-keep "pages,doi"` |
 
 ### Example Input and Output
 An example simplified output entry with the official information (The forms of bibitem like `xxx="..."` or `xxx={...}` are both supported):

@@ -9,7 +9,7 @@ with open("README.md", "r", encoding='utf-8') as fh:
 
 setup(
     name="simbiber",
-    version="0.7.0",
+    version="0.8.0",
     author="Qiguang Chen",
     author_email="charleschen2333@gmail.com",
     description="a tool to fix and simplify bib automatically.",
@@ -42,7 +42,7 @@ setup(
     packages=['Simbiber'],
     package_dir={"Simbiber":"Simbiber"},
     package_data={
-        "Simbiber": ["config/*.json","parserConfig.json","data/*.bib","out/*.bib"],
+        "Simbiber": ["config/*.json","parserConfig.json","keep_keys.cfg","data/*.bib","out/*.bib"],
     },
     py_modules=['Simbiber.main', 'Simbiber.SimBiberTool', 'Simbiber.BibTool'],
 )

@@ -46,6 +46,12 @@ class BibTool:
                      'ID': item['ID'],
                      'author': item['author'],
                      'title': item['title'], }
+        with open("keep_keys.cfg") as f:
+            reserved_keys=f.read().split(",")
+            for key in reserved_keys:
+                if key in item:
+                    temp_item[key]=item[key]
+
         if 'year' in item:
             temp_item['year'] = item['year']
         if item['ENTRYTYPE'] == 'book':

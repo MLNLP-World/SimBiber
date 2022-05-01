@@ -1,3 +1,4 @@
+import json
 from argparse import ArgumentParser
 import Simbiber
 import sys
@@ -22,8 +23,12 @@ def main():
     parser.add_argument("-a",'--if_append_output', type=str2bool, default='False')
     parser.add_argument("-cch", '--cache_num', type=int, default=100)
     parser.add_argument("-r", '--remove_duplicate', type=str2bool, default='False')
+    parser.add_argument("-keep", '--keep_keys', type=str, default=None)
     args = parser.parse_args()
     sim_biber = SimBiberTool(args)
+    if args.keep_keys is not None:
+        with open("keep_keys.cfg", 'w') as f:
+            f.write(args.keep_keys)
     sim_biber.simplify()
 
 

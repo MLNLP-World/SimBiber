@@ -26,9 +26,13 @@ def main():
     parser.add_argument("-keep", '--keep_keys', type=str, default=None)
     args = parser.parse_args()
     sim_biber = SimBiberTool(args)
+    if not (os.path.exists(filepath+"keep_keys.cfg")) and args.keep_keys is None:
+        with open("keep_keys.cfg", 'w') as f:
+            f.write("")
     if args.keep_keys is not None:
         with open("keep_keys.cfg", 'w') as f:
-            f.write(args.keep_keys)
+            f.write(args.keep_keys.replace(" ", ""))
+
     sim_biber.simplify()
 
 

@@ -1,8 +1,7 @@
 #!python
 # -*- coding:utf-8 -*-
 from __future__ import print_function
-from setuptools import setup, find_packages
-# import Simbiber
+from setuptools import setup
 
 with open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
@@ -42,7 +41,7 @@ setup(
     packages=['Simbiber'],
     package_dir={"Simbiber":"Simbiber"},
     package_data={
-        "Simbiber": ["config/*.json","parserConfig.json","keep_keys.cfg","data/*.bib","out/*.bib"],
+        "Simbiber": ["config/*.json", "parserConfig.json", "keep_keys.cfg", "data/*.bib", "out/*.bib"],
     },
     py_modules=['Simbiber.main', 'Simbiber.SimBiberTool', 'Simbiber.BibTool'],
 )

@@ -64,6 +64,8 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
 
 
 ## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/notes.png" width="25" /> Changelog
+- **2021.05.02**
+  - Fix some bugs about without `-keep` parameter.
 - **2021.05.01**
   - Support to customize the keys you want to reserve.
 - **2021.04.23**

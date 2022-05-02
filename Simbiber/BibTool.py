@@ -68,7 +68,7 @@ class BibTool:
                 if m is not None:
                     conference=self.pattern_dict[key]
                     if conference=='IJCAI':
-                        if item['note'] is not None and item['note'].lower() == 'Survey Track'.lower():
+                        if 'note' in item and item['note'].lower() == 'Survey Track'.lower():
                             conference+='(Survey Track)'
                     booktitle = 'Proc. of ' + conference
 

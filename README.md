@@ -26,6 +26,7 @@
     <br />
 </p>
 
+
 ------
 
 <div>
@@ -41,6 +42,7 @@
       <a href="#Contributors">Contributors</a> 
     </p>
 </div>
+
 
 ## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/motivation.png" width="25" /> Motivation
 We often need to simplify the official bib that consists of many information into a shorter version that only maintains necessary information (e.g., author, title, conference/journal name and etc) due to page limitation.

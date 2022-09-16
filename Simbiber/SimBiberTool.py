@@ -3,10 +3,10 @@ import time
 
 from tqdm import tqdm
 
-from utils.Bib import Bib
+from Simbiber.BibTool import BibTool
 
 
-class SimBiber():
+class SimBiberTool():
     def __init__(self, args):
         self.args = args
 
@@ -51,6 +51,7 @@ class SimBiber():
                     index = 0
             if index != 0:
                 self.__simplify_and_write__(s)
+        self.bib.remove_duplication()
         self.bib.write_to_file()
         if self.use_temp_file:
             self.__rewrite__()
@@ -68,10 +69,10 @@ class SimBiber():
                 for f in fs:
                     self.args.input_path=os.path.join(root, f)
                     self.args.output_path = os.path.join('out', f)
-                    self.bib = Bib(self.args)
+                    self.bib = BibTool(self.args)
                     self.__judge_use_temp__()
                     self.__simplify__()
         else:
-            self.bib = Bib(self.args)
+            self.bib = BibTool(self.args)
             self.__judge_use_temp__()
             self.__simplify__()

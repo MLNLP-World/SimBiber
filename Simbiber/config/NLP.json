@@ -1,9 +1,13 @@
 {
   "Association for Computational Linguistics": "ACL",
+  "Findings of the Association for Computational Linguistics": "ACL Findings",
+  "Findings of the Association for Computational Linguistics: EMNLP": "EMNLP Findings",
   "Empirical Methods in Natural Language Processing": "EMNLP",
   "Natural Language Processing and Chinese Computing": "NLPCC",
+  "NLPCC": "NLPCC",
   "International Conference on Acoustics, Speech and Signal Processing": "ICASSP",
   "International Conference on Acoustics, Speech, & Signal Processing": "ICASSP",
+  "ICASSP": "ICASSP",
   "Chinese Computational Linguistics": "CCL",
   "COLING": "COLING",
   "Workshop on Representation Learning for NLP": "RepL4NLP",
@@ -11,7 +15,10 @@
   "North American Chapter of the Association for Computational Linguistics": "NAACL",
   "European Chapter of the ACL": "EACL",
   "European Chapter of the Association for Computational Linguistics": "EACL",
+  "EACL": "EACL",
   "Asian Chapter of the Association for Computational Linguistics": "AACL",
+  "AACL": "AACL",
+  "Asia-Pacific Chapter of the Association for Computational Linguistics": "AACL",
   "Conference on Computational Natural Language Learning": "CoNLL",
   "Annual Conference on Computational Learning Theory": "COLT",
   "International Conference on Neural Information Processing": "ICONIP",
@@ -27,6 +34,7 @@
   "Arabic Natural Language Processing Workshop": "WANLP",
   "Workshop on Online Abuse and Harms": "WOAH",
   "Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis": "WASSA",
-  "Conference of the International Speech Communication Association":"INTERSPEECH"
+  "Conference of the International Speech Communication Association":"INTERSPEECH",
+  "Interspeech": "Interspeech"
 
 }

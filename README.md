@@ -5,8 +5,8 @@
   </h2>
 </div>
 <p align="center">
-  	<a href="https://img.shields.io/badge/version-v0.8.0-blue">
-      <img alt="version" src="https://img.shields.io/badge/version-v0.8.0-blue?color=FF8000?color=009922" />
+  	<a href="https://img.shields.io/badge/version-v0.8.1-blue">
+      <img alt="version" src="https://img.shields.io/badge/version-v0.8.1-blue?color=FF8000?color=009922" />
     </a>
   <a >
        <img alt="Status-building" src="https://img.shields.io/badge/Status-building-blue" />
@@ -118,7 +118,7 @@ Finally, if you run ``simbiber`` without any args, you get the following result,
 
 <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/success.jpg" alt=" " style="width:90%" />
 
-## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/catalogue.png" width="27" /> Usage(v0.8.0)
+## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/catalogue.png" width="27" /> Usage(v0.8.1)
 
 ```bash 
 simbiber -i [input bib path] -o [output bib path] 

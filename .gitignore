@@ -10,3 +10,4 @@ simbiber.egg-info/
 build/
 dist/
 pyproject.toml
+.vscode/launch.json

@@ -47,7 +47,7 @@ class BibTool:
                      'author': item['author'],
                      'title': item['title'], }
         with open("keep_keys.cfg") as f:
-            reserved_keys=f.read().split(",")
+            reserved_keys=f.read().strip("\"").strip("'").split(",")
             for key in reserved_keys:
                 if key in item:
                     temp_item[key]=item[key]

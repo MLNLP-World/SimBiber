@@ -1,3 +1,11 @@
+'''
+Author: Qiguang Chen
+LastEditors: Qiguang Chen
+Date: 2023-02-22 19:14:04
+LastEditTime: 2023-02-22 19:43:58
+Description: 
+
+'''
 #!python
 # -*- coding:utf-8 -*-
 from __future__ import print_function
@@ -8,7 +16,7 @@ with open("README.md", "r", encoding='utf-8') as fh:
 
 setup(
     name="simbiber",
-    version="0.8.0",
+    version="0.8.1",
     author="Qiguang Chen",
     author_email="charleschen2333@gmail.com",
     description="a tool to fix and simplify bib automatically.",

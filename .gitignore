@@ -11,3 +11,4 @@ build/
 dist/
 pyproject.toml
 .vscode/launch.json
+*.bib

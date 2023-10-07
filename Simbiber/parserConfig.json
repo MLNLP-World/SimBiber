@@ -14,5 +14,6 @@
   "Language Resources and Evaluation Conference": "LREC",
   "International Workshop on Semantic Evaluation":"SemEval",
   "COLING": "COLING",
-  "International Conference on Computational Linguistics": "COLING"
+  "International Conference on Computational Linguistics": "COLING",
+  "Transactions of the Association for Computational Linguistics":"TACL"
 }

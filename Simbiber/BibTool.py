@@ -79,6 +79,10 @@ class BibTool:
             journal=item['journal']
             temp = journal.replace('\n', ' ')
             temp = temp.replace('{', '').replace('}', '').replace('  ', ' ').replace('[', '').replace(']', '')
+            if temp.lower()=='transactions of the association for computational linguistics':
+                journal='TACL'
+            if temp.lower()=='transactions on machine learning research':
+                journal='TMLR'
             if temp.lower()=='advances in neural information processing systems':
                 journal='Proc. of NeurIPS'
             else:

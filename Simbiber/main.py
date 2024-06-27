@@ -1,3 +1,11 @@
+'''
+Author: Qiguang Chen
+LastEditors: Qiguang Chen
+Date: 2023-02-22 19:14:04
+LastEditTime: 2024-06-27 10:23:28
+Description: 
+
+'''
 import json
 from argparse import ArgumentParser
 import Simbiber
@@ -21,6 +29,8 @@ def main():
     parser.add_argument("-o", '--output_path', type=str, default=filepath+"out/bibtex.bib")
     parser.add_argument("-c", '--config_path', type=str, default=filepath+"config")
     parser.add_argument("-a",'--if_append_output', type=str2bool, default='False')
+    parser.add_argument("-s",'--enable_simplify', type=str2bool, default='True')
+    parser.add_argument("-m",'--merge', type=str2bool, default='False')
     parser.add_argument("-cch", '--cache_num', type=int, default=100)
     parser.add_argument("-r", '--remove_duplicate', type=str2bool, default='False')
     parser.add_argument("-keep", '--keep_keys', type=str, default=None)

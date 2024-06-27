@@ -1,3 +1,11 @@
+'''
+Author: Qiguang Chen
+LastEditors: Qiguang Chen
+Date: 2023-02-22 19:14:04
+LastEditTime: 2024-06-27 10:29:15
+Description: 
+
+'''
 import os
 import time
 
@@ -29,28 +37,55 @@ class SimBiberTool():
     def __simplify__(self):
         if not self.args.if_append_output and not self.use_temp_file:
             self.init()
-        with open(self.args.input_path, encoding='utf-8') as bibtex_file:
+        if not os.path.isdir(self.args.input_path):
+            with open(self.args.input_path, encoding='utf-8') as bibtex_file:
+                l = []
+                s = ''
+                index = 0
+                for line in tqdm(bibtex_file.readlines()):
+                    # ignore useless line
+                    if len(l) == 0 and line[0] != '@':
+                        continue
+                    for i, x in enumerate(line):
+                        if x == '{':
+                            l.append('{')
+                        elif x == '}':
+                            l.pop()
+                    s += line
+                    if len(l) == 0:
+                        index += 1
+                    if len(l) == 0 and index == self.args.cache_num:
+                        self.__simplify_and_write__(s)
+                        s = ''
+                        index = 0
+                if index != 0:
+                    self.__simplify_and_write__(s)
+        else:
             l = []
             s = ''
             index = 0
-            for line in tqdm(bibtex_file.readlines()):
-                # ignore useless line
-                if len(l) == 0 and line[0] != '@':
-                    continue
-                for i, x in enumerate(line):
-                    if x == '{':
-                        l.append('{')
-                    elif x == '}':
-                        l.pop()
-                s += line
-                if len(l) == 0:
-                    index += 1
-                if len(l) == 0 and index == self.args.cache_num:
-                    self.__simplify_and_write__(s)
-                    s = ''
-                    index = 0
-            if index != 0:
-                self.__simplify_and_write__(s)
+            for root, ds, fs in os.walk(self.args.input_path):
+                    for f in fs:
+                        with open(os.path.join(root, f), encoding='utf-8') as bibtex_file:
+                            
+                            for line in tqdm(bibtex_file.readlines()):
+                                # ignore useless line
+                                if len(l) == 0 and line[0] != '@':
+                                    continue
+                                for i, x in enumerate(line):
+                                    if x == '{':
+                                        l.append('{')
+                                    elif x == '}':
+                                        l.pop()
+                                s += line
+                                if len(l) == 0:
+                                    index += 1
+                                if len(l) == 0 and index == self.args.cache_num:
+                                    self.__simplify_and_write__(s)
+                                    s = ''
+                                    index = 0
+                            if index != 0:
+                                self.__simplify_and_write__(s)
         self.bib.remove_duplication()
         self.bib.write_to_file()
         if self.use_temp_file:
@@ -65,13 +100,21 @@ class SimBiberTool():
     def simplify(self):
         input_path=self.args.input_path
         if os.path.isdir(input_path):
-            for root, ds, fs in os.walk(input_path):
-                for f in fs:
-                    self.args.input_path=os.path.join(root, f)
-                    self.args.output_path = os.path.join('out', f)
-                    self.bib = BibTool(self.args)
-                    self.__judge_use_temp__()
-                    self.__simplify__()
+            if self.args.merge:
+                # for root, ds, fs in os.walk(input_path):
+                #     for f in fs:
+                #         self.args.input_path=os.path.join(root, f)
+                self.bib = BibTool(self.args)
+                self.__judge_use_temp__()
+                self.__simplify__()
+            else:
+                for root, ds, fs in os.walk(input_path):
+                    for f in fs:
+                        self.args.input_path=os.path.join(root, f)
+                        self.args.output_path = os.path.join('out', f)
+                        self.bib = BibTool(self.args)
+                        self.__judge_use_temp__()
+                        self.__simplify__()
         else:
             self.bib = BibTool(self.args)
             self.__judge_use_temp__()

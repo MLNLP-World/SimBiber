@@ -133,7 +133,10 @@ Tips: All path args support absolute and relative paths
 |`-a`| `--if_append_output` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> Whether append simplified data to output bib file. |
 |`-r`| `--remove_duplicate` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span> Whether remove duplication if your bib has both of arXiv or Conference citation.<br/> <b>PLEASE ATTENTION:</b> If `True`, it might cost more time to write simplified bib file. Please keep patient.  |
 |`-cch`| `--cache_num` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span>The number of bib items you want to simplify at once.<br/> <b>PLEASE ATTENTION:</b> If you want to simplify a huge bib file, you'd better change it to achieve satisfactory speed. |
+|`-m`| `--merge` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span>The keys you want to merge all bib files in a folder if `input_path` is a folder |
+|`-s`| `--enable_simplify` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span>Whether you enable simplify |
 |`-keep`| `--keep_keys` | <span style="color:#b0b0b0;font-size:10px;">[Optional]</span>The keys you want to keep in every bib item.<br/>The total form is like `-keep "pages,doi"`. NOTE: if raise unrecognized arguments error, it might be better to use `--keep_keys` |
+
 
 ### Example Input and Output
 An example simplified output entry with the official information (The forms of bibitem like `xxx="..."` or `xxx={...}` are both supported):

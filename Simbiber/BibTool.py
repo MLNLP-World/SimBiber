@@ -60,7 +60,7 @@ class BibTool:
             if 'publisher' in item:
                 temp_item['publisher'] = item['publisher']
             return temp_item
-        if 'booktitle' in item:
+        if 'booktitle' in item and self.args.enable_simplify:
             booktitle = item['booktitle'].replace('\n', ' ').replace('\&', 'and')
             booktitle = booktitle.replace('{', '').replace('}', '').replace('  ', ' ').replace('[', '').replace(']', '')
             for key in self.pattern_list:
@@ -75,7 +75,7 @@ class BibTool:
                     break
             temp_item['booktitle'] = booktitle
 
-        if 'journal' in item:
+        if 'journal' in item and self.args.enable_simplify:
             journal=item['journal']
             temp = journal.replace('\n', ' ')
             temp = temp.replace('{', '').replace('}', '').replace('  ', ' ').replace('[', '').replace(']', '')
@@ -115,6 +115,7 @@ class BibTool:
         while self.index < len(self.bib_database.entries):
             item=self.bib_database.entries[self.index]
             if item!='#':
+                
                 self.bib_database.entries[self.index]=self.__simplify_bib__(item)
                 if self.args.remove_duplicate:
                     self.mark_duplicate(item)

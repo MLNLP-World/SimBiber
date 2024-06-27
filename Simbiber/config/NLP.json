@@ -36,5 +36,7 @@
   "Workshop on Computational Approaches to Subjectivity, Sentiment and Social Media Analysis": "WASSA",
   "Conference of the International Speech Communication Association":"INTERSPEECH",
   "Interspeech": "Interspeech",
-  "Transactions of the Association for Computational Linguistics": "TACL"
+  "Transactions of the Association for Computational Linguistics": "TACL",
+  "Special Interest Group on Discourse and Dialogue": "SIGDIAL",
+  "International Conference on Data Mining": "ICDM"
 }

@@ -2,7 +2,7 @@
 Author: Qiguang Chen
 LastEditors: Qiguang Chen
 Date: 2023-02-22 19:14:04
-LastEditTime: 2024-06-27 10:29:15
+LastEditTime: 2024-06-28 15:41:58
 Description: 
 
 '''
@@ -29,7 +29,7 @@ class SimBiberTool():
     def __rewrite__(self):
         with open(self.args.output_path, 'r', encoding='utf-8') as file1:
             with open(self.args.input_path, 'w', encoding='utf-8') as file2:
-                    file2.writelines(file1.readlines())
+                file2.writelines(file1.readlines())
 
         os.remove(self.args.output_path)
 
@@ -65,27 +65,26 @@ class SimBiberTool():
             s = ''
             index = 0
             for root, ds, fs in os.walk(self.args.input_path):
-                    for f in fs:
-                        with open(os.path.join(root, f), encoding='utf-8') as bibtex_file:
-                            
-                            for line in tqdm(bibtex_file.readlines()):
-                                # ignore useless line
-                                if len(l) == 0 and line[0] != '@':
-                                    continue
-                                for i, x in enumerate(line):
-                                    if x == '{':
-                                        l.append('{')
-                                    elif x == '}':
-                                        l.pop()
-                                s += line
-                                if len(l) == 0:
-                                    index += 1
-                                if len(l) == 0 and index == self.args.cache_num:
-                                    self.__simplify_and_write__(s)
-                                    s = ''
-                                    index = 0
-                            if index != 0:
+                for f in fs:
+                    with open(os.path.join(root, f), encoding='utf-8') as bibtex_file:
+                        for line in tqdm(bibtex_file.readlines()):
+                            # ignore useless line
+                            if len(l) == 0 and line[0] != '@':
+                                continue
+                            for i, x in enumerate(line):
+                                if x == '{':
+                                    l.append('{')
+                                elif x == '}':
+                                    l.pop()
+                            s += line
+                            if len(l) == 0:
+                                index += 1
+                            if len(l) == 0 and index == self.args.cache_num:
                                 self.__simplify_and_write__(s)
+                                s = ''
+                                index = 0
+                        if index != 0:
+                            self.__simplify_and_write__(s)
         self.bib.remove_duplication()
         self.bib.write_to_file()
         if self.use_temp_file:

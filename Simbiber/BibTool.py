@@ -95,10 +95,13 @@ class BibTool:
         return temp_item
 
     def mark_duplicate(self,item):
+        if item["ID"] == "code_retrieval_cedar" and (self.index == 5223 or self.index == 5271):
+            print(1)
         if item['title'].lower() in self.dictionary:
             temp_index = self.index
             if 'booktitle' in item or ('journal' in item and not item['journal'].lower().find('arxiv')>=0):
                 temp_index = self.dictionary[item['title'].lower()]
+                self.dictionary[item['title'].lower()] = self.index
             self.bib_database.entries[temp_index] = '#'
         else:
             self.dictionary[item['title'].lower()] = self.index
@@ -124,6 +127,7 @@ class BibTool:
     def remove_duplication(self):
         if self.args.remove_duplicate:
             self.bib_database.entries=[x for x in self.bib_database.entries if x != '#']
+            assert  len(list(self.bib_database.entries)) == len(list([x["ID"] for x in self.bib_database.entries]))
 
     def write_to_file(self):
         writer = BibTexWriter()

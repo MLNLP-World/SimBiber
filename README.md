@@ -68,7 +68,7 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
 
 ## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/notes.png" width="25" /> Changelog
 - **2024.09.16**
-  - SimBiber is available at 🤗 [Hugging Face Space](https://huggingface.co/spaces/Ki-Seki/SimBiber).
+  - Thanks for the contribution of @Ki-Seki. SimBiber is available at 🤗 [Hugging Face Space](https://huggingface.co/spaces/Ki-Seki/SimBiber).
 - **2023.02.33**
   - Fix some bugs about with `-keep` parameter.
 - **2021.05.02**
@@ -385,7 +385,7 @@ Thanks to the contributors:
 <a href="https://github.com/LightChen233">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Qiguang Chen2.png"  width="65" > </a> 
 <a href="https://github.com/yizhen20133868">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Libo Qin.png"  width="69" > </a>
 <a href="https://github.com/SivilTaram">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Qian.png"  width="69" > </a> 
-<a href="http://xcfeng.net/">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/XiaChong Feng.png"  width="60" > </a>
+<a href="http://xcfeng.net/">  <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/XiaChong Feng.png"  width="60" > </a> <a href="https://github.com/Ki-Seki"> <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/Ki-Seki.png"  width="60" ></a>
 <a href="https://github.com/JiaQiSJTU"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/JiaQiSJTU.png"  width="60" ></a>
 <a href="https://github.com/ngl567"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/ngl567.png"  width="60" ></a>
 <a href="https://github.com/braveryCHR"><img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/braveryCHR.png"  width="62" ></a>

@@ -12,3 +12,4 @@ dist/
 pyproject.toml
 .vscode/launch.json
 *.bib
+._*

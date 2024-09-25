@@ -23,6 +23,9 @@
     <a href="https://github.com/MLNLP-World/SimBiber/issues">
       <img alt="Issues" src="https://img.shields.io/github/issues/MLNLP-World/SimBiber?color=0088ff"/>
     </a>
+    <a href="https://huggingface.co/spaces/Ki-Seki/SimBiber">
+      <img alt="Hugging Face Space" src="https://img.shields.io/badge/-%F0%9F%A4%97%20Hugging_Face_Space-orange"/>
+    </a>
     <br />
 </p>
 
@@ -64,6 +67,8 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
 
 
 ## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/notes.png" width="25" /> Changelog
+- **2024.09.16**
+  - SimBiber is available at 🤗 [Hugging Face Space](https://huggingface.co/spaces/Ki-Seki/SimBiber).
 - **2023.02.33**
   - Fix some bugs about with `-keep` parameter.
 - **2021.05.02**
@@ -101,6 +106,10 @@ We also highly recommend another wonderful tool for you [Rebiber](https://github
 
 
 ## <img src="https://cdn.jsdelivr.net/gh/LightChen233/blog-img/resource.png" width="25" /> Installation
+
+Use SimBiber directly in 🤗 [Hugging Face Space](https://huggingface.co/spaces/Ki-Seki/SimBiber)
+
+OR
 
 ```bash 
 git clone https://github.com/MLNLP-World/Simbiber.git

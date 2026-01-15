@@ -25,8 +25,8 @@ def main():
             return False
 
     parser = ArgumentParser()
-    parser.add_argument("-i", '--input_path', type=str, default=filepath+"data/bibtex.bib")
-    parser.add_argument("-o", '--output_path', type=str, default=filepath+"out/bibtex.bib")
+    parser.add_argument("-i", '--input_path', type=str, default=filepath+"data/references.bib")
+    parser.add_argument("-o", '--output_path', type=str, default=filepath+"out/references.bib")
     parser.add_argument("-c", '--config_path', type=str, default=filepath+"config")
     parser.add_argument("-a",'--if_append_output', type=str2bool, default='False')
     parser.add_argument("-s",'--enable_simplify', type=str2bool, default='True')

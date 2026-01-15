@@ -32,6 +32,17 @@ class BibTool:
 
         return sorted(pattern_dict.keys(), key=len,reverse=True),pattern_dict
 
+    def __normalize_arxiv__(self, item):
+        return {
+            'ENTRYTYPE':     "misc",
+            "archiveprefix": "arXiv",
+            "ID":            item["ID"],
+            "author":        item["author"],
+            "eprint":        item["journal"].split(":")[-1],
+            "title":         item["title"],
+            "year":          item["year"]
+        }
+
     def __simplify_bib__(self,item):
         if 'archiveprefix' in item:
             item['archivePrefix'] = item['archiveprefix']
@@ -39,9 +50,11 @@ class BibTool:
             if 'primaryclass' in item:
                 item['primaryClass'] = item['primaryclass']
                 del item['primaryclass']
+            del item['primaryClass']
             return item
         if 'author' not in item:
             return item
+        
         temp_item = {'ENTRYTYPE': item['ENTRYTYPE'],
                      'ID': item['ID'],
                      'author': item['author'],
@@ -76,21 +89,25 @@ class BibTool:
             temp_item['booktitle'] = booktitle
 
         if 'journal' in item and self.args.enable_simplify:
+            
             journal=item['journal']
-            temp = journal.replace('\n', ' ')
-            temp = temp.replace('{', '').replace('}', '').replace('  ', ' ').replace('[', '').replace(']', '')
-            if temp.lower()=='transactions of the association for computational linguistics':
-                journal='TACL'
-            if temp.lower()=='transactions on machine learning research':
-                journal='TMLR'
-            if temp.lower()=='advances in neural information processing systems':
-                journal='Proc. of NeurIPS'
+            if "arxiv" in journal.lower():
+                temp_item = self.__normalize_arxiv__(item)
             else:
-                m = re.search('AAAI', journal)
-                if m is not None:
-                    journal = 'Proc. of AAAI'
+                temp = journal.replace('\n', ' ')
+                temp = temp.replace('{', '').replace('}', '').replace('  ', ' ').replace('[', '').replace(']', '')
+                if temp.lower()=='transactions of the association for computational linguistics':
+                    journal='TACL'
+                if temp.lower()=='transactions on machine learning research':
+                    journal='TMLR'
+                if temp.lower()=='advances in neural information processing systems':
+                    journal='Proc. of NeurIPS'
+                else:
+                    m = re.search('AAAI', journal)
+                    if m is not None:
+                        journal = 'Proc. of AAAI'
 
-            temp_item['journal'] = journal
+                temp_item['journal'] = journal
             return temp_item
         return temp_item
 
